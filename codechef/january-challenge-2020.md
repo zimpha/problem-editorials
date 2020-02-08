@@ -7,7 +7,7 @@
 + [ ] [CHEFARMY](https://www.codechef.com/JAN20A/problems/CHEFARMY)
 + [x] [CHEFPSA](https://www.codechef.com/JAN20A/problems/CHEFPSA)
 + [x] [CHFDORA](https://www.codechef.com/JAN20A/problems/CHFDORA)
-+ [ ] [DFMTRX](https://www.codechef.com/JAN20A/problems/DFMTRX)
++ [x] [DFMTRX](https://www.codechef.com/JAN20A/problems/DFMTRX)
 + [x] [DYNAMO](https://www.codechef.com/JAN20A/problems/DYNAMO)
 + [x] [ENGLISH](https://www.codechef.com/JAN20A/problems/ENGLISH)
 
@@ -28,6 +28,8 @@
 题意：给出一个长度为$N$的数组$A$。你要选出$K$个数（可以重复选），求出它们的乘积对$P$取模的结果。对于每个$i$，输出有多少方案最后模$P$结果是$i$。
 
 $1 \le N, P \le 259431, 0 \le A_i \le P - 1, 0 \le K \le 10^9+9$，$P$是质数。
+
+题解：求出原根，转成加法问题。之后就是一个FFT。
 
 ## Army of Me
 
