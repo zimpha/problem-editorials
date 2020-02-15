@@ -1,4 +1,4 @@
-# Oleksandr Kulkov Contest 2
+# Petrozavodsk Summer 2019. Oleksandr Kulkov Contest 2
 
 - [ ] [A. Square Root Partitioning](https://codeforces.com/gym/102354/problem/A)
 - [ ] [B. Yet Another Convolution](https://codeforces.com/gym/102354/problem/B)

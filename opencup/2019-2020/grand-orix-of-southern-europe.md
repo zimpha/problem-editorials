@@ -7,7 +7,7 @@
 + [ ] [E. Life Transfer](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/E/)
 + [ ] [F. Game on a Tree](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/F/)
 + [ ] [G. Projection](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/G/)
-+ [ ] [H. Tree Permutations](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/H/)
++ [x] [H. Tree Permutations](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/H/)
 + [ ] [I. Absolute Game](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/I/)
 + [ ] [J. Graph and Cycles](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/J/)
 + [ ] [K. Stranded Robot](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/K/)
@@ -30,7 +30,7 @@ $1 \le n, s_1, s_2 \le 500, 1 \le y_i \le x_i \le 500, 1 \le r_i < t_i \le 10^9$
 
 $1 \le n \le 250, 1 \le a_i \le 10^9$
 
-##  D. Cycle String?
+## D. Cycle String?
 
 题意：给出长度为$2n$的循环串，你可以shuffle它使得任意长度为$n$的连续子串都是primitive的，即不存在非空字符串$u$和大于$1$的整数$k$，使得这个串是$u^k$。
 
@@ -65,6 +65,16 @@ $1 \le n, m, h \le 100$
 现在给出$a$，对于每个$k$，求出所有`k-perfect`的树的$1$到$n$路径上权值和。
 
 $2 \le n \le 10^5, 1 \le a_i \le n-1$
+
+题解：我们先把所有数都排序得到$a_1 \le a_2 \le \dots a_{2n-2}$。
+
+首先如果存在一个数$i$使得$a_i > i$，那么肯定是无解的。由于$1 \le a_i \le n-1$，这样的$i$一定满足$i < n - 1$。然后也就是说最多只有$i-1$个数的不超过$i$，但是$2,3,\dots,i+1$的$p_i \le i$，产生了矛盾。
+
+其次$a_i=i$的那些$i$，一定是$1$到$n$的必经点。如果$a_i=i$，那么显然最多只有$i-1$个数不超过$i-1$。同时可以知道$2,3,\dots,i$的$p_i < i$，也就是说$1$到$i-1$这些数会被用做这些点的$p_i$。于是$i+1,\dots,n$这些点的$p_i$必定大于等于$i$。也就是说从$n$到$1$一定会经过点$i$。
+
+那做法就显然了，考虑把满足$a_i=i$的点全部拿出来，假设有$m$个。然后除去这些点以外的点的集合是$S$，那么只有$m \le k \le m + |S|$的$k$是有解的。每次只需要枚举$k$，然后标记$a_i=i$的不可选，同时$S$里面最小的$k-m$个数也不可选。然后在剩下来的$2n-2-k$个数里选最大的$k$个求和即可。
+
+我们可以用$cnt(x)$表示$x$出现了多少次，然后维护$p$表示$cnt(p..n-1)$是最大的$k$个数。随着$k$的变大，某个$cnt(x)$会减少$1$，$p$永远只会单调减小。复杂度可以做到$O(n)$。
 
 ## I. Absolute Game
 

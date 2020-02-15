@@ -1,4 +1,4 @@
-# Songyang Chen Contest 2
+# Petrozavodsk Summer 2019. Songyang Chen Contest 2
 
 + [ ] [A. Salty Fish](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/A1/)
 + [ ] [B. Nonsense Time](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/B1/)

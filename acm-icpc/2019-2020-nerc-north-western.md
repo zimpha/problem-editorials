@@ -3,7 +3,7 @@
 + [ ] [A. Accurate Movement](https://contest.yandex.ru/QF2019/contest/15017/problems/A/)
 + [ ] [B. Bad Treap](https://contest.yandex.ru/QF2019/contest/15017/problems/B/)
 + [ ] [C. Cross-Stitch](https://contest.yandex.ru/QF2019/contest/15017/problems/C/)
-+ [ ] [D. Double Palindrome](https://contest.yandex.ru/QF2019/contest/15017/problems/D/)
++ [x] [D. Double Palindrome](https://contest.yandex.ru/QF2019/contest/15017/problems/D/)
 + [ ] [E. Equidistant](https://contest.yandex.ru/QF2019/contest/15017/problems/E/)
 + [x] [F. Foreach](https://contest.yandex.ru/QF2019/contest/15017/problems/F/)
 + [ ] [G. Golf Time](https://contest.yandex.ru/QF2019/contest/15017/problems/G/)

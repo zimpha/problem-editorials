@@ -1,4 +1,4 @@
-# 300iq Contest 2, Grand Prix of Kazan
+# Petrozavodsk Summer 2019. 300iq Contest 2, Grand Prix of Kazan
 
 - [ ] [A. Apollonian Network](https://codeforces.com/gym/102331/problem/A)
 - [ ] [B. Bitwise Xor](https://codeforces.com/gym/102331/problem/B)
