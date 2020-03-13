@@ -100,28 +100,6 @@
 + [2020 Humblefool Prelim](/topcoder/2020-humbleool-cup-prelims.md) [3/3]
 + [SRM 780](/topcoder/srm-780.md) [0/3]
 
-## 号家军选题
-
-+ [20200129](/nanjing-lecture/20200129.md)
-+ [20200130](/nanjing-lecture/20200130.md)
-+ [20200131](/nanjing-lecture/20200131.md)
-+ [20200202](/nanjing-lecture/20200202.md)
-+ [20200203](/nanjing-lecture/20200203.md)
-+ [20200204](/nanjing-lecture/20200204.md)
-+ [20200206](/nanjing-lecture/20200206.md)
-+ [20200207](/nanjing-lecture/20200207.md)
-+ [20200208](/nanjing-lecture/20200208.md)
-+ [20200210-16.day1](/nanjing-lecture/20200210-16.day1.md)
-+ [20200210-16.day2](/nanjing-lecture/20200210-16.day2.md)
-+ [20200217-23.day1](/nanjing-lecture/20200217-23.day1.md)
-+ [20200217-23.day2](/nanjing-lecture/20200217-23.day2.md)
-+ [POI 2019/2020. Stage II](/nanjing-lecture/xxvii-poi-stage-ii.cn.md)
-+ [Potyczki Algorytmiczne 2019. Final Round](/nanjing-lecture/pa-2019-final.cn.md)
-+ [20200302-08.day1](/nanjing-lecture/20200302-08.day1.md)
-+ [20200302-08.day2](/nanjing-lecture/20200302-08.day2.md)
-+ [20200309-15.day1](/nanjing-lecture/20200309-15.day1.md)
-+ [20200309-15.day2](/nanjing-lecture/20200309-15.day2.md)
-
 ## Open Cup
 
 + [XX Open Cup. Stage 3. Grand Prix of SPb](/opencup/2019-2020/grand-prix-of-spb.md)
@@ -171,15 +149,15 @@
 
 ## ACM/ICPC
 
-+ [2019-2020 ICPC, NERC, North-Western Russia Regional Contest](acm-icpc/2019-2020-nerc-north-western.md)
-+ [2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest](acm-icpc/2019-2020-nerc-southern.md)
-+ [2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/winter-2020/greetings-from-japan.md) [11/11]
++ [2019-2020 ICPC, NERC, North-Western Russia Regional Contest](/acm-icpc/2019-2020-nerc-north-western.md)
++ [2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest](/acm-icpc/2019-2020-nerc-southern.md)
++ [2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/2020-winter/greetings-from-japan.md) [11/11]
 + [2019 ICPC Asia-East Continent Final](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
-+ [The 14th Zhejiang Provincial Collegiate Programming Contest](acm-icpc/provincial/zhejiang-provincial-2017.md)
++ [The 14th Zhejiang Provincial Collegiate Programming Contest](/acm-icpc/provincial/zhejiang-provincial-2017.md)
 
 ## CCPC
 
-+ [The 2017 China Collegiate Programming Contest, Qinhuangdao Site](ccpc/2017-qinhuangdao.md)
++ [The 2017 China Collegiate Programming Contest, Qinhuangdao Site](/ccpc/2017-qinhuangdao.md)
 
 ## SnarkNews Winter/Summer Series
 
