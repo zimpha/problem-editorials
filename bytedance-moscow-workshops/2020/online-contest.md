@@ -1,18 +1,18 @@
 # ByteDance-Moscow Workshops Programming Camp 2020, Online Qualification Contest
 
-+ [ ] [A. Add on Prefix]
-+ [ ] [B. Best Partition]
-+ [ ] [C. Circles Covering]
-+ [ ] [D. Domino for Young]
-+ [ ] [E. Evil Segments]
-+ [ ] [F. Forbidden Triple]
-+ [ ] [G. Graph Subpaths]
-+ [ ] [H. Happy Cactus]
-+ [ ] [I. Invertation in Tournament]
-+ [ ] [J. Just Counting]
-+ [ ] [K. K Integers]
-+ [ ] [L. Long Beautiful Integer]
-+ [ ] [M. Modulo Equality]
++   [ ] [A. Add on Prefix]
++   [ ] [B. Best Partition]
++   [ ] [C. Circles Covering]
++   [ ] [D. Domino for Young]
++   [ ] [E. Evil Segments]
++   [ ] [F. Forbidden Triple]
++   [x] [G. Graph Subpaths]
++   [ ] [H. Happy Cactus]
++   [ ] [I. Invertation in Tournament]
++   [ ] [J. Just Counting]
++   [ ] [K. K Integers]
++   [ ] [L. Long Beautiful Integer]
++   [ ] [M. Modulo Equality]
 
 ## G. Graph Subpaths
 

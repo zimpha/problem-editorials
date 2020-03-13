@@ -1,12 +1,12 @@
 # Valentines Day Contest 2020
 
-+ [ ] [A. Leakage](https://codeforces.com/gym/102512/problem/A)
++ [x] [A. Leakage](https://codeforces.com/gym/102512/problem/A)
 + [ ] [B. Confession](https://codeforces.com/gym/102512/problem/B)
-+ [ ] [C. Isolation](https://codeforces.com/gym/102512/problem/C)
-+ [ ] [D. Equality](https://codeforces.com/gym/102512/problem/D)
++ [x] [C. Isolation](https://codeforces.com/gym/102512/problem/C)
++ [x] [D. Equality](https://codeforces.com/gym/102512/problem/D)
 + [ ] [E. Valentine](https://codeforces.com/gym/102512/problem/E)
-+ [ ] [F. Opposition](https://codeforces.com/gym/102512/problem/F)
-+ [ ] [G. Honeymoon](https://codeforces.com/gym/102512/problem/G)
++ [x] [F. Opposition](https://codeforces.com/gym/102512/problem/F)
++ [x] [G. Honeymoon](https://codeforces.com/gym/102512/problem/G)
 
 ## A. Leakage
 
@@ -34,11 +34,19 @@ $1 \le n \le 100, 1 \le p_i \le N$
 
 $|X|, |Y| \le 1500, |X| + |Y| > D, 1 \le N \le 1500, 0 \le D \le 4$
 
+题解：那些和$(X,Y)$距离恰好为$D$的都是不能走的点，搞出这些点集，假设有$m$个。令$dp(a,(x_i,y_i))$表示走了$a$步，第一次到达点$(x_i,y_i)$的方案数。那么$dp(a,(x_i,y_i))=ways((0,0),(x_i,y_i),a)-\sum_{b=1}^{a-1}\sum_{j=1}^{m}dp(b,(x_j,y_j) \cdot ways((x_i,y_i),(x_j,y_j),a-b))$。
+
+其中$ways((x_i,y_i),(x_j,y_j),n)$表示从$(x_i,y_i)$走$n$步到达$(x_j,y_j)$的方案数。这个就是两个组合数相乘。
+
+最后答案就是$4^N-\sum_{i=1}^{N}\sum_{j=1}^{m}dp(i,(x_j,y_j)) \cdot 4^{N-i}$。
+
 ## D. Equality
 
 题意：给出$N$，$X$个区间$[a_i,b_i]$和$Y$个区间$[c_i,d_i]$。求出有多少$T$，使得$1 \le T \le N$并且$T,3T,5T,\dots,$都在这$X$区间里，$2T,4T,6T,\dots,$都在这$Y$个区间里。
 
 $1 \le N \le 10^9, 1 \le X, Y \le 300, 1 \le a_i \le b_i \le N, 1 \le c_i \le d_i \le N$
+
+题解：转成考虑哪些$T$不合法，也就是说枚举一个不在$X$里的区间$[l,r]$使得存在一个$k$，$(2k-1)T$在区间里。或者枚举一个不在$Y$里的区间$[l,r]$使得存在一个$k$，$2kT$在区间里。枚举$k$和$T$较小那个就可以统计了。
 
 ## E. Valentine
 
@@ -52,8 +60,12 @@ $1 \le X \le 7995051, 1 \le N, M \le 200, 1 \le a_{i,j} \le 10^6$
 
 $1 \le |s| \le 200000$
 
+题解：先求出在哪些位置插入一个字符后能够得到`LOVE`。那么先手一开始一定是从这些位置里选，后手也一样。之后先手每放一步，后手就能阻止形成`LOVE`。因此仅需要维护这个集合即可。
+
 ## G. Honeymoon
 
 题意：给出$N$对数$(a_1,b_1),(a_2,b_2),\dots,(a_n,b_n)$。然后有$Q$个询问，每次给出一个区间$[l_i,r_i]$，定义$f_{x}=\max(\sum_{y=1}^{x} a_{l_i+y-1}, \sum_{y=1}^{x} b_{l_i+y-1})$，求出$f_(1)+f(2)+\dots+f(r_i-l_i+1)$。
 
 $1 \le N, Q \le 500000, -10^6 \le a_i, b_i \le 10^6, 1 \le l_i \le r_i \le n$
+
+题解：令$sb$表示$b$的前缀和，$sa$表示$a$的前缀和。那么考虑分$sb_i-sb_{l-1} \ge sa_i - sa_{l-1}$和$sb_i-sb_{l-1} < sa_i - sa_{l-1}$把$\max$去掉。等价于$sb_i-sa_i \ge sb_{l-1}-sa_{l-1}$和$sb_i-sa_i < sb_{l-1}-sa_{l-1}$。离线处理即可。

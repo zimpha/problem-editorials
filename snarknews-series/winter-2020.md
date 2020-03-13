@@ -81,7 +81,7 @@ $1 \le N, K \le 100$
 - [x] [A. Социологическое исследование](https://contest.yandex.ru/snws2020/contest/16519/problems/A/)
 - [x] [B. Агитационный стенд](https://contest.yandex.ru/snws2020/contest/16519/problems/B/)
 - [x] [C. План кампании](https://contest.yandex.ru/snws2020/contest/16519/problems/C/)
-- [ ] [D. Отдалённый район](https://contest.yandex.ru/snws2020/contest/16519/problems/D/)
+- [x] [D. Отдалённый район](https://contest.yandex.ru/snws2020/contest/16519/problems/D/)
 - [x] [E. Новый микрорайон](https://contest.yandex.ru/snws2020/contest/16519/problems/E/)
 - [x] [F. Сейф в офисе конкурентов](https://contest.yandex.ru/snws2020/contest/16519/problems/F/)
 

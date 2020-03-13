@@ -1,0 +1,1 @@
+# Petrozavodsk Winter 2020. Day 6. Lviv NU Contest
