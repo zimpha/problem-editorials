@@ -6,4 +6,4 @@ If the section  `题解` exists, it means I know the solution but I didn't imple
 
 If the checkboxes is checked, it means I implement the solution and it was accepted.
 
-Here is the [Table of contents](/toc).
+Here is the [Table of contents](/toc.md).
