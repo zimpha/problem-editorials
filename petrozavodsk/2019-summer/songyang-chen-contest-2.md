@@ -2,7 +2,7 @@
 
 + [ ] [A. Salty Fish](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/A1/)
 + [ ] [B. Nonsense Time](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/B1/)
-+ [ ] [C. Milk Candy](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/C1/)
++ [x] [C. Milk Candy](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/C1/)
 + [ ] [D. Radar Scanner](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/D1/)
 + [ ] [E. Snowy Smile](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/E1/)
 + [ ] [F. Faraway](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/F1/)
@@ -12,6 +12,12 @@
 + [ ] [J. Road Manager](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/J1/)
 + [x] [K. Monster Hunter](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/K1/)
 + [x] [L. Game Prediction](https://official.contest.yandex.ru/ptz-summer-2019/contest/13458/problems/L1/)
+
+## C. Milk Candy
+
+题意：有$n$个未知数，然后$m$个人有提示。第$i$个人有$c_i$条提示，每条提示会告诉你$l_j$到$r_j$的未知数的和，需要花费$w_j$的代价。现在你可以买提示，对于第$i$个人，你要么不买，要么恰好买$k_i$个提示。求出能够计算出$n$个数的最小代价。
+
+题解：对于一个提示，我们可以把$l_j-1$和$r_j$连边，显然如果能够买到的边包含一个生成树就可以计算出所有解了。那么考虑那些不买的边构成的集合，显然这个是一个`dual graphical matroid`。然后每个边集我们最多不买$c_i-k_i$，这个也是一个拟阵。我们求出这两个拟阵的带权拟阵交即可。如果拟阵的大小不是$\sum c_i-k_i$就是无解。
 
 ## G. Support or Not
 

@@ -1,9 +1,9 @@
 # Petrozavodsk Winter 2020. Day 9. Yuhao Du Contest 7
 
 + [ ] [A. Alternative Accounts](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/A/)
-+ [ ] [B. Bitset Master](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/B/)
++ [x] [B. Bitset Master](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/B/)
 + [ ] [C. Cyclic Distance](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/C/)
-+ [ ] [D. Data Structure Quiz](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/D/)
++ [x] [D. Data Structure Quiz](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/D/)
 + [ ] [E. Evil Subsequence](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/E/)
 + [x] [F. Fast as Ryser](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/F/)
 + [ ] [G. Geometry PTSD](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/G/)
@@ -25,10 +25,16 @@ $1 \le n \le 10^5, 1 \le k \le 4$
 
 题意：给出$n$个点的树，$n-1$条边依次为$(u_1,v_1), (u_2,v_2), \dots, (u_{n-1}, v_{n-1})$。节点$u$上有个集合$S_u$，一开始为$\{u\}$。有$m$个操作
 
-+ $1\ u$：询问$S_u$的大小。
++ $1\ u$：询问有多少$S_v$包含$u$。
 + $2\ p$：把$S_{u_p}$和$S_{v_p}$都改成$S_{u_p} \cup S_{v_p}$。
 
 $2 \le n \le 200000, 1 \le m \le 600000$
+
+题解：考虑如何暴力处理一个询问。我们从$u$开始DFS，同时维护一个变量$x$，一开始为$0$。那么一条边能走当且仅当这条边上存在一个操作$2$的下标大于$x$，同时我们把$x$更新为这条边上的最小操作下标。那么能够访问到得点的个数就是答案。那么可以用树分治优化这个过程。
+
+考虑进行树分治，对于每个分治重心$g$，我们求出$u$到达$g$的时候的$x$的值，记为$f_u$。同时，对于每个点$v$，考虑一个下标为$e$的操作$2$，这个操作恰好是$g$到$v$的路径上的最后一条边，我们求出这条路径第一条边的最大操作下标，记为$g(v,e)$。显然这两个值都可以通过一遍从$g$开始的DFS求出来。
+
+接下来考虑询问操作，假设从$u$出发，下标为$t$，那么显然得有$f(u) \le t$。然后我们需要求出在这个分治重心$g$下，有多少点$v$，满足$v$和$u$在不同子树中，并且存在一个$e$，使得$g(v,e) \ge f(u), e \le t$。这个可以离线一遍处理出来。
 
 ## C. Cyclic Distance
 
@@ -40,7 +46,13 @@ $2 \le n \le 200000, 2 \le k \le n, 1 \le u_i, v_i \le n, 1 \le l_i \le 10^6$
 
 题意：有个$n \times n$的矩阵，一开始都是$0$。一开始做了$m_1$个操作，每次选一个子矩形，把每个元素都加上$w$。然后有$m_2$个询问，每次查询一个子矩形里面的最大值。
 
-$1 \le n, m_1, m_2 \le 50000, 1 \le w \le 10^9$
+$1 \le n, m_1 \le 50000, 1 \le m_2 \le 500000, 1 \le w \le 10^9$
+
+题解：不妨假设$n=2^m$，按照$X$轴进行分治，我们可以得到一个$m$层的分治结构，第$k$层有$2^k$个区间，第$i$个区间是$[i \cdot \frac{n}{2^k}, (i+1) \cdot \frac{n}{2^k})$。
+
+那么显然对于每个询问我们可以把它分成在某些层中的$O(\log n)$个区间，我们只需要把这些区间的答案取个$\max$就是最终的答案。我们把$m_1$个操作$(x_1,y_1,x_2,y_2,w)$拆成对$x_1 \ge x, y_1 \le y \le y_2$都加上$w$，对$x_2 > x, y_1 \le y \le y_2$都减去$w$两种操作。
+
+考虑第$k$层，依次枚举每个区间，同时用线段树维护$y$坐标上的最大值。把$x$端点在这个区间里的操作都加上去，这个区间里的操作处理完后。我们来考虑完全包含这个区间的询问，显然就是在线段树上查询一个区间历史最大值。但是注意到，我们处理到下一个区间的时候，这个历史最大值不能继承过来。因此还需要支持下清空历史最大值操作。这个可以通过对区间整体加一个无穷大的值$M$来实现，加完之后当前的最大值和历史最大值都会变成$M+m_y$，其中$m_y$是$y$坐标上加之前的最大值。
 
 ## E. Evil Subsequence
 
@@ -110,3 +122,11 @@ $1 \le n \le 500, 0 \le m \le \frac{n(n-1)}{2}, 1 \le k \le 10^{18}$
 题意：给出$n$和$k$，求出$\sum_{x=1}^{n} \text{lcm}(x,x+1,\dots,x+k)$，对$10^9+7$取模。
 
 $1 \le n \le 10^{11}, 0 \le k \le 30$
+
+题解：令$L=\text{lcm}(1,2,\dots,k)$，可以发现当$x \equiv r \pmod L$时，$\frac{x(x+1)\cdots (x+k)}{\text{lcm}(x,x+1,\dots,x+k)}$是一个固定的整数$c_r$。因此$\text{lcm}(x,x+1,\dots,x+k)$可以写成$\frac{1}{c_r} \sum_{i=1}^{k+1}a_i \cdot (Lt+r)^i$的形式。如果$L$比较小，我们可以$O(Lk)$求出答案。
+
+通过本地一些实验还可以发现，令$L=p_1^{e_1}p_2^{e_2} \cdots p_m^{e_m}$，那么每个质数$p_i^{e_i}$对这个$c_r$的贡献值独立的。具体的说，令$f_i(r)$表示$x \equiv r \pmod{p_i^{e_i}}$时$p_i^{e_i}$的贡献，那么，当$r=\sum_{i=1}^{m} r_i \cdot M_i \bmod L$的时候，$c_r = \prod_{i=1}^{m} f_i(r_i)$。
+
+于是我们可以把$L$拆成$L=L_1 \cdot L_2$，然后用中国剩余定理来合并。令$r \equiv r_1 M_1 + r_2 M_2 \bmod L$，显然$r_1 M_1 + r_2 M_2 < 2L$，不妨假设$r_1M_1 + r_2M_2 < L$。
+
+按照$r_1M_1$和$r_2M_2$分别排序，然后枚举$r_1M_1$，自然也可以求出$r_2 M_2$的范围，肯定是一个前缀。然后把$r=r_1M_1 + r_2M_2$带入一开始求出来的式子，化简下即可求出答案。

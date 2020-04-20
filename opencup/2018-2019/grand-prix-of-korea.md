@@ -1,24 +1,30 @@
-# Grand Prix of Korea
+# XIX Open Cup. Grand Prix of Korea
 
-+ [ ] [Donut](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/A/)
-+ [ ] [Circular Arrangement](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/B/)
-+ [ ] [Earthquake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/C/)
-+ [ ] [Dynamic Input Tool](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/D/)
-+ [ ] [Central Lake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/E/)
-+ [ ] [Computing MDSST](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/F/)
-+ [ ] [MST with Metropolis](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/G/)
-+ [ ] [Number of Cycles](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/H/)
-+ [ ] [Square Sum of the Occurence Counts](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/I/)
-+ [ ] [Game of Sorting](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/J/)
-+ [ ] [Subsequence Queries](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/K/)
-+ [ ] [XOR Transformation](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/L/)
++ [x] [B. Dev, Please Add This!](https://official.contest.yandex.ru/opencupXIX/contest/9552/problems/B/)
++ [x] [C. Dstorv](https://official.contest.yandex.ru/opencupXIX/contest/9552/problems/C/)
 
-## I. Square Sum of the Occurence Counts
+## B. Dev, Please Add This!
 
-题意：有个字符串s$，对于每个前缀x都统计下：\sum_p f(x,p)^2，其中f(x,p)表示$p在$x$出现次数。
+题意：给一个$H \times W$的网格图，一个格子是空地或墙，空地上可能有星星。有且仅有一个空地上有一个球，每次可以把球往一个方向推，直到球碰到墙或边界。球经过一个星星就可以把那个星星吃掉，问能否吃掉所有星星。
 
-$1 \le |s| \le 10^5$
+$1 \le H, W \le 50$
 
-题解：
+题解：考虑这样一个有向图，把每行和每列里面极大的$1 \times x$的格子看成图上一个点，墙或者边界的话可以看成从一个状态到另一个状态连一条单向边。那么问题其实就变成，你需要从有`O`的点出发，走出一条路径，使得每个`*`都被经过。注意到每个`*`对应了图上两个节点，只要两个节点有一个被访问过就可以。
 
+很容易想到我们可以尝试用`2-Sat`来做这个题，图上每个点有两种状态，走过 or 没走过。那么`*`的话说明这两个点至少有一个要被走过。考虑哪些从`O`无法到达的点，在最终路径中肯定是没走过的。然后对于两个点$a$和$b$，如果$a$不能到$b$，$b$也不能到$a$，那么他们不可能同时被走过。
 
+我们可以先求解出这个`2-Sat`是否有解，可以证明如果无解的话，原问题肯定也无解。假设有解，先强连通分量缩点并且去除不可能被走过的强连通分量。那么剩下来图中任意两个强连通分量$a$和$b$，要么$a$能够到$b$，要么$b$能够到达$a$。也就是说我们有了一个竞赛图，然后只需要在竞赛图中找一条从某个点出发的哈密尔顿路即可，这个显然是可以做到的。因此`2-Sat`有解的话，原问题也一定有解。
+
+## C. Dstorv
+
+题意：数轴上排列着$N$个左箭头和右箭头，每个箭头都会以相同速度朝着各自方向移动。当一个左箭头和一个右箭头相遇时会有一个固定的概率$p$使得其中一方消失，问在无穷多的时间后留下恰好$A$个右箭头和$B$个左箭头的概率。
+
+$1 \le N \le 5000, 0 \le r, h \le 10^6, 1 \le r+h, 0 \le A, B \le N, 1 \le A + B \le N$
+
+题解：可以发现一定存在一个时刻$t$，存在一个$i$，使得$(-\infty, i]$里只有右箭头，$[i+1,\infty)$里只有左箭头并且位置$i$和$i+1$上分别有一个左箭头和右箭头。显然，只要找到这个$i$，就可以把前缀和后缀分成两个问题。
+
+先考虑前缀，令$dp_l(i,j)$表示考虑了$i$以前的所有位置，右边还有$j$个左箭头要过来，这个前缀里恰好剩下$B$个左箭头的概率。显然有初始状态$dp_l(0,B)=1$。如果当前位置是左箭头，那么$dp_l(i+1,j-1) \leftarrow dp(i,j)$；如果当前位置是右箭头，我们需要把这个右箭头个消除掉，那么有$dp_l(i+1,j) \leftarrow dp_l(i+1,j-1) \cdot \frac{r}{r+h} + dp_l(i,j) \cdot \frac{h}{r+h}$。
+
+类似的，也可以定义$dp_r(i,j)$表示考虑了$i$以后的所有位置，左边还有$j$个右箭头要过来，这个前缀里恰好剩下$A$个右箭头的概率。转移方程也是类似的。
+
+最终答案就是$\sum_{i=0}^{N} dp_l(i,0) \times dp_r(i+1,0)$。

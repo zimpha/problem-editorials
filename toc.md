@@ -1,4 +1,8 @@
-# Table of contents
+---
+format: Markdown
+...
+
+
 ## JOI
 
 + [JOI 2019/2020](japanese-olympiad-in-informatics/2019-2020.md)
@@ -56,6 +60,10 @@
 + [PA 2018](/potyczki-algorytmiczne/2018.md)
 + [PA 2019](/potyczki-algorytmiczne/2019.md)
 
+## Russian Olympiad in Informatics
+
++ [ROI 2019/2020](russian-olympiad-in-informatics/2019-2020.md)
+
 ## COCI
 
 + [COCI 2019/2020](/coci/2019-2020.md)
@@ -68,7 +76,7 @@
 
 + [AtCoder Beginner Contest Selections](/atcoder/abc.md)
 + [Keyence Programming Contest 2020](/atcoder/keyence2020.md)
-+ [Dwango Programming Contest 6th](/atcoder/dwacon6th-prelims.md)
++ [Dwango Programming Contest 6th](/atcoder/dwacon6th-prelims.md) [5/5]
 
 ## Codeforces
 
@@ -76,6 +84,7 @@
 + [Codeforces Round #539](/codeforces/codeforces-round-539.md)
 + [Codeforces Round #594](/codeforces/codeforces-round-594.md)
 + [Codeforces Round #606](/codeforces/codeforces-round-606.md)
++ [Hello 2020](/codeforces/hello-2020.md) [7/7]
 + [Codeforces Round #612](/codeforces/codeforces-round-612.md)
 + [Codeforces Round #614](/codeforces/codeforces-round-614.md)
 + [Codeforces Round #621](/codeforces/codeforces-round-621.md)
@@ -98,7 +107,8 @@
 + [SRM 778](/topcoder/srm-778.md) [3/3]
 + [SRM 779](/topcoder/srm-779.md) [3/3]
 + [2020 Humblefool Prelim](/topcoder/2020-humbleool-cup-prelims.md) [3/3]
-+ [SRM 780](/topcoder/srm-780.md) [0/3]
++ [SRM 780](/topcoder/srm-780.md) [3/3]
++ [SRM 781](/topcoder/srm-781.md) [3/3]
 
 ## Open Cup
 
@@ -108,7 +118,7 @@
 + [XX Open Cup. Stage 6. Grand Prix of Southeastern Europe](/opencup/2019-2020/grand-prix-of-southern-europe.md)
 + [XX Open Cup. Stage 7. Grand Prix of Siberia](/opencup/2019-2020/grand-prix-of-siberia.md)
 + [XX Open Cup. Stage 10. Grand Prix of Xian](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
-+ [XIX Open Cup. Stage 1. Grand Prix of Kazan](/petrozavodsk/summer-2019/300iq-contest-2.md)
++ [XIX Open Cup. Stage 1. Grand Prix of Kazan](/petrozavodsk/2019-summer/300iq-contest-2.md)
 + [XIX Open Cup. Stage 5. Grand Prix of Korea](/opencup/2018-2019/grand-prix-of-korea.md)
 + [XIX Open Cup. Stage 8. Grand Prix of Dolgoprudny](/opencup/2018-2019/grand-prix-of-dolgoprudny.md)
 + [XIX Open Cup. Stage 11. Grand Prix of Gomel](/opencup/2018-2019/grand-prix-of-gomel.md)
@@ -124,7 +134,7 @@
 
 + [Petrozavodsk Wintwe 2020. Day 1. SPb SU Contest](/petrozavodsk/2020-winter/spb-su-contest.md) [9/12]
 + [Petrozavodsk Wintwe 2020. Day 2. Greetings from Japan](/petrozavodsk/2020-winter/greetings-from-japan.md) [11/11]
-+ [Petrozavodsk Wintwe 2020. Day 3. 300iq Contest 3](/petrozavodsk/2020-winter/300iq-contest-3.md)
++ [Petrozavodsk Wintwe 2020. Day 3. 300iq Contest 3](/petrozavodsk/2020-winter/300iq-contest-3.md) [10/10]
 + [Petrozavodsk Winter 2020. Day 4. Yandex Cup 2020](/petrozavodsk/2020-winter/yandex-cup-2020.md)
 + [Petrozavodsk Winter 2020. Day 5. Jagiellonian U Contest](/petrozavodsk/2020-winter/jagiellonian-u-contest.md)
 + [Petrozavodsk Winter 2020. Day 6. Lviv NU Contest](/petrozavodsk/2020-winter/lviv-nu-contest.md)
@@ -149,15 +159,15 @@
 
 ## ACM/ICPC
 
-+ [2019-2020 ICPC, NERC, North-Western Russia Regional Contest](/acm-icpc/2019-2020-nerc-north-western.md)
-+ [2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest](/acm-icpc/2019-2020-nerc-southern.md)
-+ [2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/2020-winter/greetings-from-japan.md) [11/11]
++ [2019-2020 ICPC, NERC, North-Western Russia Regional Contest](acm-icpc/2019-2020-nerc-north-western.md)
++ [2019-2020 ICPC, NERC, Southern and Volga Russian Regional Contest](acm-icpc/2019-2020-nerc-southern.md)
++ [2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/winter-2020/greetings-from-japan.md) [11/11]
 + [2019 ICPC Asia-East Continent Final](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
-+ [The 14th Zhejiang Provincial Collegiate Programming Contest](/acm-icpc/provincial/zhejiang-provincial-2017.md)
++ [The 14th Zhejiang Provincial Collegiate Programming Contest](acm-icpc/provincial/zhejiang-provincial-2017.md)
 
 ## CCPC
 
-+ [The 2017 China Collegiate Programming Contest, Qinhuangdao Site](/ccpc/2017-qinhuangdao.md)
++ [The 2017 China Collegiate Programming Contest, Qinhuangdao Site](ccpc/2017-qinhuangdao.md)
 
 ## SnarkNews Winter/Summer Series
 

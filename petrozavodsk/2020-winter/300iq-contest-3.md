@@ -2,10 +2,10 @@
 
 + [x] [A. Airplane Cliques](https://codeforces.com/gym/102538/problem/A)
 + [x] [B. Best Tree](https://codeforces.com/gym/102538/problem/B)
-+ [ ] [C. Cells Blocking](https://codeforces.com/gym/102538/problem/C)
++ [x] [C. Cells Blocking](https://codeforces.com/gym/102538/problem/C)
 + [x] [D. Disjoint LIS](https://codeforces.com/gym/102538/problem/D)
 + [x] [E. Easy Win](https://codeforces.com/gym/102538/problem/E)
-+ [ ] [F. Farm of Monsters](https://codeforces.com/gym/102538/problem/F)
++ [x] [F. Farm of Monsters](https://codeforces.com/gym/102538/problem/F)
 + [x] [G. Giant Penguin](https://codeforces.com/gym/102538/problem/G)
 + [x] [H. Horrible Cycles](https://codeforces.com/gym/102538/problem/H)
 + [x] [I. Ignore Submasks](https://codeforces.com/gym/102538/problem/I)
@@ -35,7 +35,9 @@ $2 \le n \le 200000, 1 \le d_i \le n - 1, \sum d_i = 2(n-1)$
 
 $1 \le n, m \le 3000$
 
-题解：PA 2019题改
+题解：先求出$from_{x,y}$表示$(1,1)$能否到达$(x,y)$以及$to_{x,y}$表示从$(x,y)$能否到达$(n,m)$。然后求出两条从$(1,1)$到$(n,m)$的路径，一条尽量往下走，一条尽量往右走，分别记为$path_{down}$和$path_{right}$。那么两条路径重合部分就是能够只用一个障碍物阻挡的放法。只要选了这些的某个位置，那么剩下一个障碍物可以随便放。
+
+接下来考虑选其他位置，那么这个位置肯定在一条路径上，不妨令它在$path_{down}$上。假设选取位置为$(x,y)$，我们需要找一个最小的$i$使得$(x-i,y+i)$能够到达$(n,m)$且能被$(1,1)$到达。那么从这个$(x-i,y+i)$开始我们就能获得新的$path^\prime_{down}$。同时也可知道和$path_{right}$的重合部分。
 
 ## D. Disjoint LIS
 
@@ -66,6 +68,10 @@ $1 \le n \le 500000, 1 \le a_i \le n$
 题意：有$n$只怪，第$i$只血量为$h_i$。你和你对手轮流打怪，你可以造成$a$点伤害，你的对手可以造成$b$点伤害。你每次可以任意选择一个怪打，你的对手会每次选择还活着的，标号最小的怪打。求出你最多能打死几只怪。
 
 $1 \le n \le 300000, 1 \le a, b \le 10^9, 1 \le h_i \le 10^9$
+
+题解：显然对于第$i$只怪，对手打死它需要$\lfloor \frac{h_i-1}{b} \rlfoor + 1$下，而如果你决定要打死这个怪，你只需要打它$\lfloor \frac{(h_i-1) \bmod b}{a} \rlfoor + 2$下。
+
+于是你可以用个优先队列维护你打死的怪的次数，以及你当前还剩余的次数。如果当前剩余次数够，肯定直接用这些次数打即可。否则你可能会替换出优先队列一只怪，使得剩余次数变得尽可能大。
 
 ## G. Giant Penguin
 
