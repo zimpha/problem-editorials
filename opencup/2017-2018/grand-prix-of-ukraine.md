@@ -10,7 +10,7 @@
 - [ ] [H. Frog Jumping](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/H/)
 - [ ] [I. Slot Machine](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/I/)
 - [ ] [J. Half is Good](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/J/)
-- [ ] [K. Dance](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/K/)
+- [x] [K. Dance](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/K/)
 - [ ] [L. Impress Her](https://official.contest.yandex.ru/opencupXVIII/contest/5917/problems/L/)
 
 ## A. Accommodation Plan
@@ -40,3 +40,5 @@ $1 \le |s|, |t| \le 200000, 1 \le w_i \le 10^9$
 对于那些$p_k$的位置，我们可以进行普通的dp转移，只有$s_i=t_{p_k}$的位置才是合法的dp状态。
 
 对于那些$[p_k+1,p_{k+1}-1]$段，我们可以一起转移，把这个子串抠出来，只有在$s^\prime$上匹配的位置才是合法的dp状态。
+
+## K. Dance

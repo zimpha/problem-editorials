@@ -1,4 +1,4 @@
-# Grand Prix of Eurasia
+# XX Open Cup. Stage 4. Grand Prix of Eurasia
 
 + [ ] [A. Ants](https://official.contest.yandex.ru/opencupXX/contest/14371/problems/1/)
 + [ ] [B. Blend](https://official.contest.yandex.ru/opencupXX/contest/14371/problems/2/)

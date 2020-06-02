@@ -6,10 +6,20 @@
 - [ ] [D. Game X]
 - [ ] [E. 5-Path]
 - [ ] [F. Nightmare]
-- [ ] [G. String Transformation]
+- [x] [G. String Transformation]
 - [ ] [H. Employees]
 - [ ] [I. Modulo-magic squares]
 - [x] [J. Count the Sequences]
+
+## G. String Transformation
+
+题意：给出一个长度为$n$的字符串$s$，仅有字符`AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz`组成。你每次可以把一个字符改成上述表中下一个字符，最终使得恰好有$k$个洞。求出最小操作次数。
+
+$1 \le n \le 10^5, -10^{18} \le k \le 10^{18}$
+
+题解：显然对于每个字符$c$，能够求出$cost(c,x)$表示改成恰好有$x$个洞的最小操作次数。可以发现，如果我们知道最终有多少个字符恰好有$2$个洞，多少字符恰好有$1$个洞，那么可以用费用流求出最小操作次数。可以证明，最小操作次数关于两个洞字符个数是凸的，于是可以三分最终恰好有两个洞的字符个数，然后建立一个费用流模型。
+
+别解：考虑$dp(x)$表示最终有$x$洞的最小操作次数，可以证明存在一个$r$，使得$dp(x)-dp(x+r) \ge dp(x+r) - dp(x+2r)$，也就是说每隔$r$个位置是一个凸壳。于是可以用分治+闵可夫斯基和来解决这个题。
 
 ## J. Count the Sequences
 

@@ -1,4 +1,4 @@
-# Grand Prix of Korea
+# XX Open Cup. Stage 5. Grand Prix of Korea
 
 + [ ] [A. 6789](https://official.contest.yandex.ru/opencupXX/contest/14556/problems/A/)
 + [ ] [B. Bigger Sokoban](https://official.contest.yandex.ru/opencupXX/contest/14556/problems/B/)
@@ -35,6 +35,8 @@ $1 \le n, m \le 1000, 1 \le q \le 300000$
 题意：有两个长度为$n$个数组$s$和$t$，每个元素要么是$1$，要么是$2$。每次可以选择连续两个或者三个位置翻转下，代价是元素之和加上$c$。求最小代价从$s$变成$t$。
 
 $1 \le n \le 500, 0 \le c \le 1000$
+
+题解：
 
 ## E. Dead Cacti Society
 

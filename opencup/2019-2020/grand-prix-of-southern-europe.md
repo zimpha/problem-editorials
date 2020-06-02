@@ -1,4 +1,4 @@
-# Grand Prix of Southern Europe
+# XX Open Cup. Stage 6. Grand Prix of Southern Europe / SEERC 2019
 
 + [ ] [A. Max or Min](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/A/)
 + [ ] [B. Level Up](https://official.contest.yandex.ru/opencupXX/contest/14765/problems/B/)

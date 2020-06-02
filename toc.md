@@ -1,7 +1,5 @@
----
-format: Markdown
-...
 
+# Table of Contents
 
 ## JOI
 
@@ -112,13 +110,26 @@ format: Markdown
 
 ## Open Cup
 
++ [XX Open Cup. Stage 1. Grand Prix of Kazan / Petrozavodsk Summer 2019. 300iq Contest 2](/opencup/2019-2020/grand-prix-of-kazan.md)
++ [XX Open Cup. Stage 2. Grand Prix of Warsaw / Petrozavodsk Summer 2019. Radewoosh + mnbvmar Contest](/opencup/2019-2020/grand-prix-of-warsaw.md)
 + [XX Open Cup. Stage 3. Grand Prix of SPb](/opencup/2019-2020/grand-prix-of-spb.md)
 + [XX Open Cup. Stage 4. Grand Prix of Eurasia](/opencup/2019-2020/grand-prix-of-eurasia.md)
 + [XX Open Cup. Stage 5. Grand Prix of Korea](/opencup/2019-2020/grand-prix-of-korea.md)
-+ [XX Open Cup. Stage 6. Grand Prix of Southeastern Europe](/opencup/2019-2020/grand-prix-of-southern-europe.md)
++ [XX Open Cup. Stage 6. Grand Prix of Southeastern Europe / SEERC 2019](/opencup/2019-2020/grand-prix-of-southern-europe.md)
 + [XX Open Cup. Stage 7. Grand Prix of Siberia](/opencup/2019-2020/grand-prix-of-siberia.md)
-+ [XX Open Cup. Stage 10. Grand Prix of Xian](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
-+ [XIX Open Cup. Stage 1. Grand Prix of Kazan](/petrozavodsk/2019-summer/300iq-contest-2.md)
++ [XX Open Cup. Stage 8. Grand Prix of Poland / AMPPZ 2019](/opencup/2019-2020/grand-prix-of-poland.md)
++ [XX Open Cup. Stage 9. Grand Prix of Beijing / CCPC Final 2019](/opencup/2019-2020/grand-prix-of-beijing.md)
++ [XX Open Cup. Stage 10. Grand Prix of Xian / 2019 ICPC Asia-East Continent Final](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
++ [XX Open Cup. Stage 11. Grand Prix of Gomel / Petrozavodsk Winter 2020. Gennady Korotkevich Contest 5](/opencup/2019-2020/grand-prix-of-gomel.md)
++ [XX Open Cup. Stage 12. Grand Prix of Zhejiang / Petrozavodsk Winter 2020. Yuhao Du Contest 7](/opencup/2019-2020/grand-prix-of-zhejiang.md)
++ [XX Open Cup. Stage 13. Grand Prix of America / 2020 ICPC North America Championship](/opencup/2019-2020/grand-prix-of-america.md)
++ [XX Open Cup. Stage 14. Grand Prix of Wroclaw](/opencup/2019-2020/grand-prix-of-wroclaw.md)
++ [XX Open Cup. Stage 15. Grand Prix of Tokyo](/opencup/2019-2020/grand-prix-of-tokyo.md)
++ [XX Open Cup. Stage 16. Grand Prix of Moscow](/opencup/2019-2020/grand-prix-of-moscow.md)
++ [XX Open Cup. Stage 17. Grand Prix of Nanjing](/opencup/2019-2020/grand-prix-of-nanjing.md)
++ [XX Open Cup. Stage 18. Grand Prix of Bytedance](/opencup/2019-2020/grand-prix-of-bytedance.md)
++ [XX Open Cup. Stage 19. Grand Prix of Serbia](/opencup/2019-2020/grand-prix-of-serbia.md)
++ [XX Open Cup. Stage 20. ??]
 + [XIX Open Cup. Stage 5. Grand Prix of Korea](/opencup/2018-2019/grand-prix-of-korea.md)
 + [XIX Open Cup. Stage 8. Grand Prix of Dolgoprudny](/opencup/2018-2019/grand-prix-of-dolgoprudny.md)
 + [XIX Open Cup. Stage 11. Grand Prix of Gomel](/opencup/2018-2019/grand-prix-of-gomel.md)
@@ -126,7 +137,11 @@ format: Markdown
 + [XIX Open Cup. Stage 14, Grand Prix of Bytedance](/opencup/2018-2019/grand-prix-of-bytedance.md)
 + [XIX Open Cup. Stage 16. Grand Prix of Moscow](/opencup/2018-2019/grand-prix-of-moscow.md)
 + [XIX Open Cup. Stage 19. Grand Prix of Daejeon](/opencup/2018-2019/grand-prix-of-daejeon.md)
++ [XIX Open Cup. Stage ?. Grand Prix of Poland / AMPPZ 2018](/opencup/2018-2019/grand-prix-of-poland.md)
++ [XIX Open Cup. Stage ?. Grand Prix of Xi'An / EC Final 2018](/opencup/2018-2019/grand-prix-of-xian.md)
 + [XVIII Open Cup. Stage 1. Grand Prix of Romania](/opencup/2017-2018/grand-prix-of-romania.md)
++ [XVIII Open Cup. Stage ?. Grand Prix of Saratov](/opencup/2017-2018/grand-prix-of-saratov.md)
++ [XVIII Open Cup. Stage ?. Grand Prix of Korea](/opencup/2017-2018/grand-prix-of-korea.md)
 + [XVIII Open Cup. Stage 6. Grand Prix of Ukraine](/opencup/2017-2018/grand-prix-of-ukraine.md)
 + [XVI Open Cup. Stage 15. Grand Prix of Moscow](/opencup/2015-2016/grand-prix-of-moscow.md)
 
@@ -138,16 +153,17 @@ format: Markdown
 + [Petrozavodsk Winter 2020. Day 4. Yandex Cup 2020](/petrozavodsk/2020-winter/yandex-cup-2020.md)
 + [Petrozavodsk Winter 2020. Day 5. Jagiellonian U Contest](/petrozavodsk/2020-winter/jagiellonian-u-contest.md)
 + [Petrozavodsk Winter 2020. Day 6. Lviv NU Contest](/petrozavodsk/2020-winter/lviv-nu-contest.md)
-+ [Petrozavodsk Winter 2020. Day 7. Gennady Korotkevich Contest 5](/petrozavodsk/2020-winter/gennady-korotkevich-contest-5.md)
 + [Petrozavodsk Winter 2020. Day 8. Almost Algorithmic Contest](/petrozavodsk/2020-winter/almost-algoritmic-contest.md)
-+ [Petrozavodsk Winter 2020. Day 9. Yuhao Du Contest 7](/petrozavodsk/2020-winter/yuhao-du-contest-7.md)
 + [Petrozavodsk Summer 2019. Day 1. Songyang Chen Contest 2](/petrozavodsk/2019-summer/songyang-chen-contest-2.md)
-+ [Petrozavodsk Summer 2019. Day ?. 300iq Contest 2](/petrozavodsk/2019-summer/300iq-contest-2.md)
 + [Petrozavodsk Summer 2019. Day ?. MEX Foundation Contest](/petrozavodsk/2019-summer/mex-foundation-contest.md)
 + [Petrozavodsk Summer 2019. Day ?. Oleksandr Kulkov Contest 2](/petrozavodsk/2019-summer/oleksandr-kulkov-contest-2.md)
 + [Petrozavodsk Winter 2019. Day ?. 300iq Contest 1](/petrozavodsk/2019-winter/300iq-contest-1.md)
 + [Petrozavodsk Winter 2019. Day ?. Petrozavodsk SU Contest](/petrozavodsk/2019-winter/petrozavodsk-su-contest.md)
 + [Petrozavodsk Winter 2019. Day ?. Oleksandr Kulkov Contest 1](/petrozavodsk/2019-winter/oleksandr-kulkov-contest-1.md)
++ [Petrozavodsk Summer 2018. Day ?. t.me/umnik_team Contest](/petrozavodsk/2018-summer/umnik-team-contest.md)
++ [Petrozavodsk Summer 2018. Day ?. Yuhao Du Contest 5](/petrozavodsk/2018-summer/yuhao-du-contest-5.md)
++ [Petrozavodsk Winter 2017. Day ?. Tsinghua U Deep Dark Fantasy Contest](/petrozavodsk/2017-winter/deep-dark-fantasy-contest.md)
++ [Petrozavodsk Summer 2015. Day 4. Moscow IPT Contest](/petrozavodsk/2015-summer/moscow-ipt-contest.md) [10/10]
 
 ## Japan Alumni Group
 

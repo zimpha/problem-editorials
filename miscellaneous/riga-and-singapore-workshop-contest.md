@@ -4,12 +4,24 @@
 + [ ] [B. MST](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/B)
 - [ ] [C. Tree Circles](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/C)
 - [ ] [D. Angle Beats 2.0](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/D)
-- [ ] [E. LIS](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/E)
+- [x] [E. LIS](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/E)
 - [ ] [F. Good Coloring](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/F)
 - [ ] [G. Circle Convertation](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/G)
 - [ ] [H. Equal MEX](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/H)
 - [ ] [I. Cactus is Money](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/I)
 - [x] [J. Good Permutations](https://codeforces.com/group/6jlYbsz6PW/contest/252619/problem/J)
+
+## E. LIS
+
+题意：给出$4$个序列$a_1, a_2, \ldots, a_n$;  $b_1, b_2, \ldots, b_n$;  $x_1, x_2, \ldots, x_n$;  $y_1, y_2, \ldots, y_n$。
+
+构建一个有向图：如果$i < j$并且$a_i \cdot x_j + b_i \geq y_j$，那么从$i$连一条边到$j$。求出这个有向图的最长路。
+
+$1 \le n \le 150000, 0 \leq a_i, x_i \leq 300000, 0 \leq b_i, y_i \leq 10^{11}$
+
+题解：令$dp_i$表示以$i$为结尾的最长路，考虑用一棵线段树维护凸壳。线段树节点$[l,r]$维护了满足$l \le dp_i \le r$的所有直线$y=a_i \cdot x + b_i$。
+
+那么对于一个$(x_j,y_j)$，我们在线段树上二分出最大的满足条件的$dp_i$。显然用动态凸壳的模板就可以搞定了。复杂度$O(n \log^2 n)$。
 
 ## J. Good Permutations
 

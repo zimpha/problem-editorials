@@ -1,4 +1,4 @@
-# 2019 ICPC Asia-East Continent Final
+# XX Open Cup. Stage 10. Grand Prix of Xi'An / 2019 ICPC Asia-East Continent Final
 
 + [ ] [A. City](https://codeforces.com/gym/102471/problem/A)
 + [ ] [B. Black and White](https://codeforces.com/gym/102471/problem/B)

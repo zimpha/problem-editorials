@@ -1,4 +1,4 @@
-# Grand Prix of SPb
+# XX Open Cup. Stage 3. Grand Prix of SPb
 
 + [ ] [A. Polynomial in a Black Box]
 + [ ] [B. Board Trick]

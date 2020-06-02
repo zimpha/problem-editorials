@@ -9,7 +9,7 @@
 + [ ] [G. Choreography](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/G/)
 + [ ] [H. Cheat](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/H/)
 + [x] [I. Interest](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/I/)
-+ [ ] [J. Planet of the singles](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/J/)
++ [x] [J. Planet of the singles](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/J/)
 + [ ] [K. Shadow](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/K/)
 + [ ] [L. Boss of all bosses](https://official.contest.yandex.ru/opencupXX/contest/17756/problems/L/)
 
@@ -41,3 +41,17 @@ $1 \le n \le 10^5, 1 \le m \le 10^6$
 + 在最短路树$D$上的边：可以发现从$u$其实可以到达树上任意的节点，并且花费的代价都是$0$，因为树边的边权都是$0$了。考虑把点$u$删掉，那么$u$所在的连通块会分成若干个小连通块。对于横跨不同小连通块之间的边$A \to B$，我们显然是可以用$dist(u) + w(A,B)$来更新$dist(B)$的。所以一个粗暴的做法就是枚举每个新出现的小连通块，以及里面每条横跨边，做一遍更新。但是这样复杂度是$O(n^2)$的。可以发现，如果不遍历最大的连通块，只遍历其他较小的连通块，这样复杂度是有保证的，每条边最多只会被遍历$O(\log n)$次。
 
 如何判定两个连通块的大小呢，可以考虑倍增的方法。倍增枚举较小的连通块的大小为$2^s$，然后两个连通块各自跑$dfs$，要求恰好遍历$2^s$个点。显然，存在一个$s$使得较小的连通块不能遍历$2^s$个点，较大连通块可以遍历$2^s$个点。这个时候我们就区分出大小了。
+
+## J. Planet of the singles
+
+题意：有两个长度为$4n$的`01`串，你可以对第一个串做如下的操作：
+
+1. 把某一个`0`改成`1`，代价是$t_0$
+2. 把某一个`1`改成`0`，代价是$t_1$
+3. 交换相邻两个位置，代价是$t_s$
+
+求出把第一个串变成第二个串的最小代价。
+
+$1 \le n \le 10^6, 1 \le t_0, t_1, t_s \le 10^{12}$
+
+题解：

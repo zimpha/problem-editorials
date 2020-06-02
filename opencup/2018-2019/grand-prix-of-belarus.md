@@ -3,7 +3,7 @@
 + [ ] [A. Alien Invasion](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/A/)
 + [ ] [B. Bus Stop](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/B/)
 + [ ] [C. Calculating Average](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/C/)
-+ [ ] [D. Data Structure Problem](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/D/)
++ [x] [D. Data Structure Problem](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/D/)
 + [ ] [E. Expected Cost](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/E/)
 + [x] [F. Fractional XOR Maximization](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/F/)
 + [ ] [G. Go West](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/G/)
@@ -12,6 +12,40 @@
 + [x] [J. Jimp Numbers](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/J/)
 + [ ] [K. K-Triangles](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/K/)
 + [ ] [L. Long Game](https://official.contest.yandex.ru/opencupXIX/contest/11931/problems/L/)
+
+## D. Data Structure Problem
+
+题意：给出一个长度为$2^p$的数组$a$，数组下标从$0$开始。你需要处理以下五种询问：
+
+1. add $v$ $\delta$: 把数组中第$v$个元素加上$\delta$. 
+2. sum $l$ $r$: 算出$a_l+a_{l+1} + \dots + a_r$ 
+3. and $k$: 可以用如下伪代码描述: 
+```
+b = array of 2^p zeroes
+for i in 0..2^p - 1:
+  b[i and k] += a[i]
+a = b
+```
+4. or $k$: 可以用如下伪代码描述: 
+```
+b = array of 2^p zeroes
+for i in 0..2^p - 1:
+  b[i or k] += a[i]
+a = b
+```
+5. xor $k$: 可以用如下伪代码描述: 
+```
+b = array of 2^p zeroes
+for i in 0..2^p - 1:
+  b[i xor k] += a[i]
+a = b
+```
+
+其中`and`，`or`和`xor`分别表示位运算与，或和异或；`2^p`表示$2^p$。
+
+$0 \le p \le 19, 1 \le q \le 5 \times 10^5$
+
+题解：
 
 ## F. Fractional XOR Maximization
 
