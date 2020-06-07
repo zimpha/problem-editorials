@@ -1,4 +1,4 @@
-# XIX Open Cup. Grand Prix of Bytedance
+# XIX Open Cup. Stage 13. Grand Prix of Bytedance
 
 + [ ] [A. Algorithm Was Applied](https://official.contest.yandex.ru/opencupXIX/contest/12091/problems/A/)
 + [x] [B. Balanced Rainbow Sequence](https://official.contest.yandex.ru/opencupXIX/contest/12091/problems/B/)

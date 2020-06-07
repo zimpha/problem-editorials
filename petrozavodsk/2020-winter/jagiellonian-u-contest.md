@@ -1,6 +1,6 @@
 # Petrozavodsk Winter 2020. Day 5. Jagiellonian U Contest
 
-+ [ ] [A. Bags of Candies](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A5/)
++ [x] [A. Bags of Candies](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A5/)
 + [x] [B. Binomial](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B5/)
 + [ ] [C. Bookface](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C5/)
 + [x] [D. Clique](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D5/)
@@ -18,6 +18,12 @@
 题解：给出$n$，考虑这样的图：$i$和$j$之间右边当且仅当$\gcd(i,j) > 1$。求出这个图的最大匹配。
 
 $2 \le n \le 10^{11}$
+
+题解：令$p$是$(\lfloor \frac{n}{2} \rfloor, n]$内质数个数加$1$。可以发现，这里面的数两两都不能匹配，于是答案的上界是$\lfloor \frac{n-p}{2} \rfloor$。可以证明，除了这些数以外的数都可以匹配。
+
+令$f(x)$表示$x$的最大质因子，考虑按照$f(x)$把剩下的数分组。可以发现如果$x$在某个组里，$2x$必定也在这个组里。那么，偶数个数的组肯定都匹配完了。对于奇数个数的组，我们肯定可以留下一个$2$的倍数。那么剩下的数就也能两两匹配了。
+
+然后直接套模板计算素数个数即可。
 
 ## B. Binomial
 

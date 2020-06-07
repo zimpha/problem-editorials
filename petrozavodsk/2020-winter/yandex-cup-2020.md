@@ -1,12 +1,12 @@
 # Petrozavodsk Winter 2020. Day 4. Yandex Cup 2020
 
-+ [ ] [A. Y-Shaped Knife](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A4/)
++ [x] [A. Y-Shaped Knife](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A4/)
 + [x] [B. Bad Doctor](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B4/)
 + [x] [C. Topological Ordering](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C4/)
 + [x] [D. Bracket Euler Tour](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D4/)
-+ [ ] [E. Tree of Charge](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E4/)
++ [x] [E. Tree of Charge](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E4/)
 + [x] [F. Find a Tree](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/F4/)
-+ [ ] [G. One Root](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G4/)
++ [x] [G. One Root](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G4/)
 + [x] [H. Delete the Points](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/H4/)
 + [ ] [I. Hard Times for Your Data](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/I4/)
 + [x] [J. Program](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/J4/)
@@ -17,7 +17,13 @@
 
 $1 \le n \le 10^5, -10^6 \le x_i, y_i \le 10^6$
 
-题解：
+题解：先把所有点按照某个随机角度旋转一下，这样就能保证每个点的$x$坐标互不相同。可以证明，当$n \equiv 0 \bmod 3$的时候一定是有解的。并且一定存在一个$r=0$的解，在旋转后的点上。
+
+考虑枚举竖线$x$，把$x$左边的点按照$-\frac{1}{\sqrt{3}}$的斜率投影到这条直线上，右边的点按照$\frac{1}{\sqrt{3}}$的斜率投影到这条直线上。由于随机，显然每个点的在上面的投影都互不相同。
+
+考虑前$\frac{2n}{3}$个位置，对于一个合法的$x$，其中必有$\frac{n}{3}$来自$x$的左边，$\frac{n}{3}$来自$x$的右边。可以发现，随着$x$从$-\infty$变大到$\infty$，来自$x$左边的点数从$0$逐渐变大到$\frac{2n}{3}$。于是我们可以二分出合法的$x$来。
+
+知道$x$后，直接就可以算出中心点的$y$坐标。之后按照旋转角度转回去即可。
 
 ## B. Bad Doctor
 
@@ -59,7 +65,16 @@ $1 \le n, m \le 200000$
 
 $2 \le n \le 500000, 0 \le c_i \le 10^9+6, 1 \le v_i \le n, 0 \le x_i \le 10^9+7$
 
-题解：每个值其实可以分开考虑，分别计算最后的贡献即可。
+题解：注意到一个down后面接着一个up的话，其实可以把这两个操作都删掉。也就是说，最终每个节点都是先向上走$c_{up}$次，然后再向下走$c_{down}$次。这个把所有询问倒着做一遍就可以方便求出每个点对应的$c_{up}$和$c_{down}$。
+
+注意到往上走可以直接走，我们不妨直接走到最终节点，接下来需要处理比较麻烦的往下走。假设节点$u$会往下走到一个节点$v$，那么$c_u$对$v$的答案的贡献就是$\frac{c_u}{\prod_{x \in path(u,v)} ChildrenCount(x)}$。
+
+考虑离线DFS整棵树，然后用线段树维护当前栈中节点对深度为$d$的贡献。那么进入这个节点$u$的时候，我们只需要对深度$depth(u)+c_{down}(u)$加上$w(u)$即可。然后询问$depth(u)$在线段树上的值，这个就是当前点$u$的最终答案。
+
+然后进入子树前，把深度在$[depth(u), n]$内的值都乘上$\frac{1}{ChildrenCount(x)}$即可。
+
+离开节点的时候撤销所有操作。
+
 
 ## F. Find a Tree
 
@@ -75,9 +90,10 @@ $1 \le n, k \le 10^6, 0 \le m \le 10^6$
 
 $1 \le n, m \le 10^6, n \ge 2$
 
-题解：对于整数系数多项式$a_nx^n+a_{n-1}x^{n-1}+\dots+a_0=0$，所有实根$\frac{x}{y}$都满足$x$是$a_0$的约数，$y$是$a_n$的约数。
+题解：令$f(x)=x^n+px+q$，考虑$f^\prime(x)=nx^{n-1}+p$，分$n$的奇偶性讨论。
 
-对于这题，$a_n=1$，$a_0=q$，也就是说$y=\pm 1$，$x \mid q$。枚举$q$后，然后枚举$x$和$y$即可确定一个实根，然后可以解出$p$。之后把解出的$p$归类下，只出现一次的加入答案即可。
++ $n$是偶数，那么$f^\prime(x)=0$解只有一个$x=(-\frac{p}{n})^{\frac{1}{n-1}}$。根据单调性，只有$f((-\frac{p}{n})^{\frac{1}{n-1}})=0$这种情况。化简后得到$q=-(-\frac{p}{n})^{\frac{1}{n-1}} \cdot (p-\frac{p}{n})$。枚举$p$，然后用`long double`计算出$q$即可。
++ $n$是奇数，那么当$p < 0$的时候$f^\prime(x)=0$有两个解$x=\pm (-\frac{p}{n})^{\frac{1}{n-1}}$，否则有一个解$0$或者无解。可以发现$p \ge 0$的时候，任意$q$都存在一个实根。令$y=-(-\frac{p}{n})^{\frac{1}{n-1}} \cdot (p-\frac{p}{n})$，那么有$|q| \ge y$。用`long double`计算出$y$，然后就可以求出$q$的范围了。
 
 ## H. Delete the Points
 
@@ -93,7 +109,7 @@ $1 \le n \le 3000, 0 \le x_i, y_i \le 10^9$
 
 $1 \le n \le 500, 0 \le m \le \frac{n(n-1)}{2}$
 
-
+题解：据说是这篇论文：[Maximum Skew-Symmetric Flows and Matchings](https://arxiv.org/abs/math/0304290)
 
 ## J. Program
 

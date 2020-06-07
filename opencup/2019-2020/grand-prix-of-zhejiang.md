@@ -2,7 +2,7 @@
 
 + [ ] [A. Alternative Accounts](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/A/)
 + [x] [B. Bitset Master](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/B/)
-+ [ ] [C. Cyclic Distance](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/C/)
++ [x] [C. Cyclic Distance](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/C/)
 + [x] [D. Data Structure Quiz](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/D/)
 + [ ] [E. Evil Subsequence](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/E/)
 + [x] [F. Fast as Ryser](https://official.contest.yandex.ru/opencupXX/contest/17333/problems/F/)
@@ -41,6 +41,24 @@ $2 \le n \le 200000, 1 \le m \le 600000$
 题意：给出$n$个点的树，第$i$条边连接$u_i$和$v_i$，边权为$l_i$。给出一个$k$，找出$k$个不同的节点$p_1,p_2,\dots,p_k$，使得$\sum_{i=1}^{k} \text{dis}(p_i,p_{i \bmod k + 1})$最大。
 
 $2 \le n \le 200000, 2 \le k \le n, 1 \le u_i, v_i \le n, 1 \le l_i \le 10^6$
+
+题解：令$dp(u, x)$表示以$u$为根的子树里，恰好选了$x$个点的最优值，考虑如何从$u$的儿子更新到$u$。
+
+显然有$dp(u,x)=\max_{x=x_1+x_2+\dots+x_m}(\sum_{i=1}^{m} dp(v_i,x_i)+2 \cdot \min(k,k-x_i) \cdot w(u, v_i))$
+
+可以发现，$dp(u, \cdot)$是凸的，因为$\min(k,k-x_i) \cdot w(u, v_i)$随着$x_i$变大是递减的。于是可以用闵可夫斯基和来做合并。
+
+我们用一个优先队列维护$dp(u,x)-dp(u,x-1)$，那么每次其实就是对队列里面最大的$\lfloor \frac{k}{2} \rfloor$的数加上$2 \cdot w(u,v)$；如果$k$是奇数的话，需要对第$\frac{k+1}{2}$的数加上$0$；对于剩下的数，需要减去$2 \cdot w(u,v)$。
+
+用启发式合并的方式合并每个子树对应的优先队列即可。
+
+别解：假设$x$是我们选出来的$k$个点的中心，即$x$的每个子树里面都有不超过$\frac{k}{2}$个选定的点。令$f(x)$是所求的答案，可以发现当$k$是偶数的时候，$f(x)$是凸函数。那么，类似[VK Cup 2015. Finals. C. Logistical Questions](/codeforces/vk-cup-2015#c.-logistical-questions)的分析，当$k$是偶数的时候，我们可以用树分治来做这个题。
+
+固定$x$之后，可以发现$f(x)=\sum_{p_i} 2 \cdot \text{dist}(p_i, x)$，类似[Codeforces Round #268 (Div. 1). D. Tree](https://codeforces.com/contest/468/problem/D) 这题。因此只需要在保证每个子树不超过$\frac{k}{2}$个点的情况下，选出$\text{dist}(p_i, x)$最大的$k$个点即可。
+
+之后，考虑不加任何限制，统计最大的$k$个距离里面，哪个子树里面出现次数最多。如果出现次数超过$\frac{k}{2}$，那么就往这个子树里面走即可。
+
+当$k$是奇数的时候，可以证明一定是$k-1$的最优解加上一个其它点。那么先用上述过程求出$k-1$的最优解，然后枚举新加的点$x$，计算答案即可。
 
 ## D. Data Structure Quiz
 

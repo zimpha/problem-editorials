@@ -16,10 +16,16 @@
 
 ## B. Balanced Binary String
 
+题意：
+
 ## C. Digital Root
 
 题意：
 
 ## F. Subset Sum
 
+题意：
+
 ## K. Determination
+
+题意：
