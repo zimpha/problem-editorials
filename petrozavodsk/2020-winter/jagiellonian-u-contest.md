@@ -1,17 +1,17 @@
 # Petrozavodsk Winter 2020. Day 5. Jagiellonian U Contest
 
-+ [x] [A. Bags of Candies](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A5/)
-+ [x] [B. Binomial](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B5/)
-+ [ ] [C. Bookface](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C5/)
-+ [x] [D. Clique](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D5/)
-+ [ ] [E. Contamination](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E5/)
-+ [ ] [F. The Halfwitters](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/F5/)
-+ [ ] [G. Invited Speakers](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G5/)
-+ [ ] [H. Lighthouses](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/H5/)
-+ [ ] [I. Sum of Palindromes](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/I5/)
-+ [ ] [J. Space Gophers](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/J5/)
-+ [ ] [K. To argue, or not to argue](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/K5/)
-+ [x] [L. Wizards Unite](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/L5/)
++ [x] [A. Bags of Candies](https://codeforces.com/gym/102576/problem/A)
++ [x] [B. Binomial](https://codeforces.com/gym/102576/problem/B)
++ [x] [C. Bookface](https://codeforces.com/gym/102576/problem/C)
++ [x] [D. Clique](https://codeforces.com/gym/102576/problem/D)
++ [x] [E. Contamination](https://codeforces.com/gym/102576/problem/E)
++ [x] [F. The Halfwitters](https://codeforces.com/gym/102576/problem/F)
++ [x] [G. Invited Speakers](https://codeforces.com/gym/102576/problem/G)
++ [x] [H. Lighthouses](https://codeforces.com/gym/102576/problem/H)
++ [x] [I. Sum of Palindromes](https://codeforces.com/gym/102576/problem/I)
++ [x] [J. Space Gophers](https://codeforces.com/gym/102576/problem/J)
++ [x] [K. To argue, or not to argue](https://codeforces.com/gym/102576/problem/K)
++ [x] [L. Wizards Unite](https://codeforces.com/gym/102576/problem/L)
 
 ## A. Bags of Candies
 
@@ -39,7 +39,17 @@ $1 \le n \le 10^6, 1 \le a_i \le 10^6$
 
 $1 \le n \le 200000, 1 \le d \le 10^6, 0 \le c_i \le 3 \cdot 10^{11}$
 
-题解：先排序成$c_1 \le c_2 \le \dots \le c_n$，显然最终状态他们的相对顺序肯定不变比较好。
+题解：先排序成$c_1 \le c_2 \le \dots \le c_n$，显然最终状态他们的相对顺序肯定不变比较好。也就是说最终$c_i$会变成$b_i$，并且有$0 \le b_1$和$b_i + d \le b_{i+1}$。
+
+不妨令$c^\prime_i=c_i - (i-1)d$，那么上面条件变成了$0 \le b^\prime_1$和$b^\prime_i \le b^\prime_{i+1}$。
+
+令$f(i,j)$表示前$i$个数中第$i$个数变成了$j$的最优代价，那么可以发现$f(i,j)=\min_{k \le j} f(i-1,k) + |j-c_i|$。如果令$g(i,j)=\min_{k \le j} f(i,j)$，那么转移方程就变成了$f(i,j)=g(i-1,j)+|j-c_i|$。
+
+很容易发现$f(i,\cdot)$和$g(i,\cdot)$一定是一些分段线性函数拼接在一起的，这是因为我们从$y=0$开始，然后会加上一些$y=|x-c_i|$的函数，然后还会对前缀取$\min$。显然这些操作都不会使函数变成非线性的，于是最终是一些线性函数分段拼在一起。
+
+进一步观察可以发现$g(i,\cdot)$，一定是从某个斜率$-k$开始，依次递增到$0$。显然在这个转移方程里面，只有最后一段斜率是$0$的有用，因为最小值一定产生在这里。于是我们就可以维护这些线性函数的分界点，以及斜率为$0$那一段的值即可。
+
+如果我们有一个优先队列维护分界点的话，那么每次就是加入两个$c_i$，然后弹掉最大值。
 
 ## D. Clique
 
@@ -64,7 +74,7 @@ $1 \le n \le 3000$
 
 $1 \le n, q \le 10^6, -10^9 \le c_x, c_y \le 10^9, 1 \le r \le 10^9, -10^9 \le p_x,p_y,q_x,q_y,y_{min},y_{max} \le 10^9, y_{min} \le p_y,q_y \le y_{max}$
 
-题解：考虑单组询问，把同时和$y_{min}$和$y_{max}$有交的圆拿出来。由于圆和圆之间没有公共点，那么不能到达的条件就是存在一个圆$(c_x,y_y)$，使得$p_x$和$p_y$在$c_x$的两侧。
+题解：考虑单组询问，把同时和$y_{min}$和$y_{max}$有交的圆拿出来。由于圆和圆之间没有公共点，那么不能到达的条件就是存在一个圆$(c_x,c_y)$，使得$p_x$和$q_x$在$c_x$的两侧。
 
 那么考虑离线，按照$y$从小到大考虑，维护出当前和$y_{min}$有交的所有圆。用线段树维护$c_x$对应的圆的上边界，如果$[p_x,p_y]$里有上边界大于等于$y_{max}$，那么就是不能走过去。
 
@@ -80,13 +90,29 @@ $1 \le n, q \le 10^6, -10^9 \le c_x, c_y \le 10^9, 1 \le r \le 10^9, -10^9 \le p
 
 $2 \le n \le 16, 1 \le a, b, c \le 1000$
 
+题解：如果只考虑前两种操作的话，显然代价之和逆序对个数有关，如果逆序对个数是$i$，那么代价是$cost(i)=\min(i \cdot a, (\frac{n(n-1)}{2} - i) \cdot a + b)$。
+
+令$dp(i)$表示逆序对为$i$的排列排好需要的时间，$cnt(i)$表示逆序对为$i$的排列个数。那么随机一个排列排好的期望时间是
+
+$$
+X = \sum\limits_{i=0}^{\frac{n(n-1)}{2}} \frac{dp(i) \cdot cnt(i)}{n!}
+$$
+
+如果我们能够求出$X$，那么就只需要拿$X$和前两种操作代价比一比取较小值即可。
+
+把$cost(i)$和$cnt(i)$按照$(cost(i), cnt(i))$的顺序从小到大排序。那么一个合法的$X$，一定存在一个$i$，使得$cost(i) \le X+c$并且$cost(i+1) \ge X+c$。于是对于$x \le i$，我们有$dp(x)=cost(x)$；对于$x \ge i + 1$，我们有$dp(x)=X+c$。
+
+那么我们就可以枚举这个$i$，然后列出关于$X$的一个等式，然后解出$X$，判定是否符合条件即可。
+
 ## G. Invited Speakers
 
 题意：给出$n$个黑点和$n$个白点，保证$x$坐标互不相同，$y$坐标互不相同。你需要把他们用$n$条不相交的polyline匹配。构造一组解。
 
 $1 \le n \le 6, -100 \le x_i, y_i \le 100$
 
-题解：一定存在一组解，可以用一条线段连接白点和黑点。
+题解：先按照$(x,y)$排序。如果相邻的两个点$(x_1,y_1)$和$(x_2,y_2)$颜色不同，那么肯定可以用$(x_1,y_2) - (x_1,Y) - (x_2,Y) - (x_2,y_2)$这条折线搞出来，然后去掉这一对。
+
+$Y$从小到大递增就可以保证不相交。
 
 ## H. Lighthouses
 
@@ -94,11 +120,23 @@ $1 \le n \le 6, -100 \le x_i, y_i \le 100$
 
 $3 \le n \le 300, -10^9 \le x_i,y_i \le 10^9$
 
+题解：考虑如果选了一条边$(u,v)$，那么显然可以分成两个不相交的部分。因此，我们可以考虑dp来求最长路。
+
+令$dp(len, i, 0/1)$表示从$i$开始逆时针长度为$len$这些点，从$i$出发或者从$(i+len) \bmod n$出发的最长路。
+
+只需要枚举下一个点往哪里走，然后切成两个区间继续dp即可。复杂度$O(n^3)$。
+
 ## I. Sum of Palindromes
 
 题意：给出一个十进制数$n$，把它表示成最多$25$个回文数之和。
 
 $1 \le |n| \le 10^5$
+
+题解：显然可以把一个数写成$a=xy$，其中$x$的长度为$\lceil \frac{n}{2} \rceil$，$y$的长度为$\lfloor \frac{n}{2} \rfloor$。
+
+考虑令$x^\prime=x-1$，然后在$x^\prime$后面接上$|y|$个数字，使得它变成一个回文串$b$。
+
+显然有，$a-b \le 10^{n/2+1}$，因此重复这个过程最多$O(\log n)$次，我们就得到了一个长度最多为$2$的数字串，直接特判即可。
 
 ## J. Space Gophers
 
@@ -106,15 +144,19 @@ $1 \le |n| \le 10^5$
 
 $1 \le n \le 300000, 1 \le q \le 500000$
 
+题解：考虑一个$(x, y, t)$的管道，他可以和$(x + 1, y, t), (x - 1, y, t), (x, y + 1, t), (x, y - 1, t)$这些管道相连，也可以和$(x, t, \cdot), (x \pm 1, \cdot, t), (t, y, \cdot), (t, y \pm 1, \cdot)$这些管道相连。
+
+用一些数据结构维护下，然后直接dfs即可。
+
 ## K. To argue, or not to argue
 
 题意：给出$n \times m$的格子，有些位置被占用了。你需要把$x_1,y_1,x_2,y_2,\dots,x_k,y_k$填入空位置，使得$x_i$和$y_i$不相邻。求方案数，对$10^9+7$取模。
 
 $1 \le nm \le 144, 1 \le k \le \frac{mn}{2}$
 
-题解：考虑容斥，先假设他们没有标号，求出恰好有$j$对相邻的方案数$f(j)$，那么答案就是$2^k \cdot \sum_{j=0}^{k} (-1)^j \cdot \binom{k,j} \cdot f(j) \cdot j! \prod_{r=0}^{k-j-1} \binom{sum-2j-2r}{2}$，其中$sum$表示空位置个数。
+题解：考虑容斥，先假设他们没有标号，求出恰好有$j$对相邻的方案数$f(j)$，那么答案就是$2^k \cdot \sum_{j=0}^{k} (-1)^j \cdot \binom{k}{j} \cdot f(j) \cdot j! \prod_{r=0}^{k-j-1} \binom{sum-2j-2r}{2}$，其中$sum$表示空位置个数。
 
-然后由于$\min(n,m) \le 12$，$f(j)$可以逐格dp来求出来。
+然后由于$\min(n,m) \le 12$，$f(j)$可以逐格dp来求出来。复杂度$O(nmk \cdot 2^{\min(n,m)})$.
 
 ## L. Wizards Unite
 

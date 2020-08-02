@@ -1,7 +1,14 @@
-# Petrozavodsk Winter 2017. Tsinghua U Deep Dark Fantasy Contest
+# Petrozavodsk Winter 2017. Day 5. Tsinghua U Deep Dark Fantasy Contest
 
++ [ ] [A. Random Numbers]
++ [ ] [B. Defense Tower]
 + [x] [C. Eulerian Orientation]
++ [ ] [D. Tube Master II]
 + [x] [E. Palindrome]
++ [ ] [F. Median on Binary Tree]
++ [ ] [G. Card Shuffling]
++ [ ] [H. Independent Events]
++ [ ] [I. Territory Game]
 
 ## C. Eulerian Orientation
 

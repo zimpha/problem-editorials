@@ -1,15 +1,15 @@
 # Petrozavodsk Winter 2020. Day 4. Yandex Cup 2020
 
-+ [x] [A. Y-Shaped Knife](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A4/)
-+ [x] [B. Bad Doctor](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B4/)
-+ [x] [C. Topological Ordering](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C4/)
-+ [x] [D. Bracket Euler Tour](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D4/)
-+ [x] [E. Tree of Charge](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E4/)
-+ [x] [F. Find a Tree](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/F4/)
-+ [x] [G. One Root](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G4/)
-+ [x] [H. Delete the Points](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/H4/)
-+ [ ] [I. Hard Times for Your Data](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/I4/)
-+ [x] [J. Program](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/J4/)
++ [x] [A. Y-Shaped Knife](https://www.acmicpc.net/problem/18501)
++ [x] [B. Bad Doctor](https://www.acmicpc.net/problem/18502)
++ [x] [C. Topological Ordering](https://www.acmicpc.net/problem/18503)
++ [x] [D. Bracket Euler Tour](https://www.acmicpc.net/problem/18504)
++ [x] [E. Tree of Charge](https://www.acmicpc.net/problem/18505)
++ [x] [F. Find a Tree](https://www.acmicpc.net/problem/18506)
++ [x] [G. One Root](https://www.acmicpc.net/problem/18507)
++ [x] [H. Delete the Points](https://www.acmicpc.net/problem/18508)
++ [ ] [I. Hard Times for Your Data](https://www.acmicpc.net/problem/18509)
++ [x] [J. Program](https://www.acmicpc.net/problem/18510)
 
 ## A. Y-Shaped Knife
 

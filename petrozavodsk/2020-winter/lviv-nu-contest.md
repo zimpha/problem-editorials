@@ -1,17 +1,17 @@
 # Petrozavodsk Winter 2020. Day 6. Lviv NU Contest
 
-+ [x] [A. Outlier](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A6/)
-+ [ ] [B. A Math Problem](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B6/)
-+ [ ] [C. A Permutation Problem](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C6/)
-+ [ ] [D. Split in Sets](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D6/)
-+ [ ] [E. The Destruction of the Crystals](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E6/)
-+ [ ] [F. Balls](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/F6/)
-+ [ ] [G. Football Match](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G6/)
-+ [ ] [H. Hill](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/H6/)
-+ [x] [I. Special Game](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/I6/)
-+ [ ] [J. Even More Exciting Game](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/J6/)
-+ [ ] [K. Potato Shuffle](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/K6/)
-+ [ ] [L. Palindrome](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/L6/)
++ [x] [A. Outlier](https://www.acmicpc.net/problem/18730)
++ [ ] [B. A Math Problem](https://www.acmicpc.net/problem/18731)
++ [ ] [C. A Permutation Problem](https://www.acmicpc.net/problem/18732)
++ [x] [D. Split in Sets](https://www.acmicpc.net/problem/18733)
++ [ ] [E. The Destruction of the Crystals](https://www.acmicpc.net/problem/18734)
++ [ ] [F. Balls](https://www.acmicpc.net/problem/18735)
++ [ ] [G. Football Match](https://www.acmicpc.net/problem/18736)
++ [ ] [H. Hill](https://www.acmicpc.net/problem/18737)
++ [x] [I. Special Game](https://www.acmicpc.net/problem/18738)
++ [ ] [J. Even More Exciting Game](https://www.acmicpc.net/problem/18739)
++ [ ] [K. Potato Shuffle](https://www.acmicpc.net/problem/18740)
++ [ ] [L. Palindrome](https://www.acmicpc.net/problem/18741)
 
 ## A. Outlier
 
@@ -43,6 +43,15 @@ $2 \le n \le 1000$
 题意：有$n$个整数$a_1,a_2,\dots,a_n$和$k$个互不相同的盒子。你需要把这个$n$个数分到这$k$个盒子里，要求每个盒子里至少有一个数。一个盒子的代价为盒子里数的`AND`。求出最大代价和，以及能够达到这个最大值的方案数，对$10^9+7$取模。
 
 $1 \le k \le n \le 10^5, 0 \le a_i \le 10^9$
+
+题解：先解决如何求最大值。令$f(a_1,a_2,\dots,a_n,k)$是问题想要求的最大值，其中$a_1 \le a_2 \le \dots \le a_n$。考虑从高位到低位依次贪心。假设最高位$b$上有$one$个数是`1`，有$zero$个数是`0`，可以分成以下四种情况：
+
++ $a_1=a_2=\dots=a_n=0$，那么显然不管怎么放都有$f(a_1,a_2,\dots,a_n,k)=0$。
++ $zero=0$，显然每个盒子这一位一定都是`1`了，于是可以去掉这一位继续考虑低位们。因此$f(a_1,a_2,\dots,a_n,k)=f(a_1 \oplus 2^b, a_2  \oplus 2^b, \dots, a_n  \oplus 2^b, k) + k \cdot 2^b$。
++ $zero \ne 0, one < k$，显然这$one$个数一定要各放一个盒子里面，剩下的`0`们要放进剩下的$k-one$个盒子里面。因此，$f(a_1,a_2,\dots,a_n,k) = f(a_1,a_2,\dots,a_{zero}, k-one) + one \cdot 2^b$。
++ $zero \ne 0, one \ge k$，为了达到最大，这$zero$个`0`肯定要放进同一个盒子里面的了，这也意味着其中$k-1$个盒子第$b$位一定是`1`。于是我们可以直接将这$zero$个数先`AND`起来，成为一个数。因此$f(a_1,a_2,\dots,a_n,k) = f(a_1 \text{ AND } a_2  \text{ AND } \dots \text{ AND } a_{zero}, a_{zero+1}, a_{zero+2}, \dots, a_{n}, k) + (k-1) \cdot 2^b$。
+
+接下来考虑如何求方案数。可以发现上述过程中只有第$1$种和第$3$种情况才可能产生不同的方案。其中第$3$种的贡献是$\binom{k}{one} \cdot one!$。第$1$中的贡献等价于要把$n$个不同的球放进$k$个不同的盒子里，要求每个盒子至少有$1$个球。可以直接容斥解决，$\sum_{i=1}^{k} (-1)^{k-i} \binom{k}{i} \cdot i^n$。
 
 ## E. The Destruction of the Crystals
 

@@ -1,17 +1,17 @@
 # Grand Prix of Korea
 
-+ [ ] [Donut](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/A/)
-+ [ ] [Circular Arrangement](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/B/)
-+ [ ] [Earthquake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/C/)
-+ [ ] [Dynamic Input Tool](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/D/)
-+ [ ] [Central Lake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/E/)
-+ [ ] [Computing MDSST](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/F/)
-+ [x] [MST with Metropolis](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/G/)
-+ [ ] [Number of Cycles](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/H/)
-+ [x] [Square Sum of the Occurence Counts](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/I/)
-+ [ ] [Game of Sorting](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/J/)
-+ [ ] [Subsequence Queries](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/K/)
-+ [ ] [XOR Transformation](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/L/)
++ [ ] [A. Donut](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/A/)
++ [ ] [B. Circular Arrangement](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/B/)
++ [ ] [C. Earthquake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/C/)
++ [ ] [D. Dynamic Input Tool](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/D/)
++ [ ] [E. Central Lake](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/E/)
++ [ ] [F. Computing MDSST](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/F/)
++ [x] [G. MST with Metropolis](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/G/)
++ [ ] [H. Number of Cycles](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/H/)
++ [x] [I. Square Sum of the Occurence Counts](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/I/)
++ [ ] [J. Game of Sorting](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/J/)
++ [ ] [K. Subsequence Queries](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/K/)
++ [ ] [L. XOR Transformation](https://official.contest.yandex.com/opencupXVIII/contest/7389/problems/L/)
 
 ## G. MST with Metropolis
 

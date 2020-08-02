@@ -5,7 +5,7 @@
 - [x] [C. Counting Cactus](https://codeforces.com/gym/102331/problem/C)
 - [ ] [D. Determinant](https://codeforces.com/gym/102331/problem/D)
 - [ ] [E. Easy Win](https://codeforces.com/gym/102331/problem/E)
-- [ ] [F. Fast Spanning Tree](https://codeforces.com/gym/102331/problem/F)
+- [x] [F. Fast Spanning Tree](https://codeforces.com/gym/102331/problem/F)
 - [ ] [G. Grammarly](https://codeforces.com/gym/102331/problem/G)
 - [x] [H. Honorable Mention](https://codeforces.com/gym/102331/problem/H)
 - [ ] [I. Interactive Vertex](https://codeforces.com/gym/102331/problem/I)
@@ -39,6 +39,31 @@ $$
 考虑用dp模拟这个过程，$f(S,T)$表示当前点集是$S$，这次bfs还没处理的点集是$T$。然后我们每次枚举$T$里最小的点$u$，以及枚举一个子集$H$，把$f(S,T) \cdot CS(u,X)$更新到$f(S \cup X, T - \{u\})$上去。
 
 这样就可以$O(4^n)$求出所有方案。比上一个做法简单很多。
+
+## F. Fast Spanning Tree
+
+题意：有一个$n$个点的无向图，一开始没有任何边，第$i$个点的权值为$w_i$。有$m$个三元组$(a_i,b_i,s_i)$，考虑如下的过程：
+
++ 如果不存在一个$i$，使得$a_i$和$b_i$不连通，并且$a_i$所在连通块的权值和加上$b_i$所在连通块的权值和大于等于$s_i$，那么结束。
++ 否则，找到最小的满足条件的$i$，在$a_i$和$b_i$直接连一条边。
+
+求出按照上面过程每次加入的边的序号。
+
+$1 \le n, m \le 300000, 0 \le w_i \le 10^6, 1 \le a_i, b_i \le n, a_i \ne b_i, 0 \le s_i \le 10^6$
+
+题解：对于三个整数$a,b,s$，如果有$a+b \ge s$，那么显然有$a \ge \lceil \frac{s}{2} \rceil$或者$b \ge \lceil \frac{s}{2} \rceil$。
+
+那么我们可以考虑把一条边拆成两个事件点：$a_i$所在的连通块权值不小于$\lceil \frac{s_i}{2} \rceil$和$b_i$所在的连通块权值不小于$\lceil \frac{s_i}{2} \rceil$。然后用一个优先队列来维护满足条件的事件点们。
+
+拿出一个编号最小的事件点$e$的话，可以发现有这几种情况：
+
++ $a_e$和$b_e$早已经连通了，那么我们直接忽略掉。
++ $a_e$和$b_e$不连通，并且满足$W(a_e)+W(b_e) \ge s_e$，那么我们可以把这个事件点编号加入答案。
++ 否则，假设$a_e$和$b_e$所在连通块分别权值为$x$和$y$，那么我们可以搞出两个新的事件点：$a_e$所在连通大小不小于$x+\lceil \frac{s_e - x - y}{2} \rceil$和$b_e$所在连通大小不小于$y+\lceil \frac{s_e - x - y}{2} \rceil$。
+
+不断往队列里加入新的事件点和取出事件点即可。
+
+可以发现，每个数$s_e$，最多经过$O(\log s_e)$次后就会达成目标。因此复杂度是$O(n \log n \log S)$的。
 
 ## H. Honorable Mention
 

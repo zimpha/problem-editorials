@@ -1,4 +1,4 @@
-# Petrozavodsk Summer 2018. t.me/umnik_team Contest
+# Petrozavodsk Summer 2018. Day 1. t.me/umnik_team Contest
 
 + [x] [A. Ciphertext](https://acm.timus.ru/problem.aspx?space=1&num=2118)
 

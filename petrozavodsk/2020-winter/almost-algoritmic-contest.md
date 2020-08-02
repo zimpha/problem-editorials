@@ -1,19 +1,19 @@
 # Petrozavodsk Winter 2020. Day 8. Almost Algorithmic Contest
 
-+ [ ] [A. Um nik’s Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/A8/)
-+ [ ] [B. String Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/B8/)
-+ [ ] [C. StalinSort Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/C8/)
-+ [ ] [D. FFT Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/D8/)
++ [ ] [A. Um_nik’s Algorithm](https://www.acmicpc.net/problem/18488)
++ [ ] [B. String Algorithm](https://www.acmicpc.net/problem/18489)
++ [ ] [C. StalinSort Algorithm](https://www.acmicpc.net/problem/18490)
++ [ ] [D. FFT Algorithm](https://www.acmicpc.net/problem/18491)
 + [ ] [E. Binary Search Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/E8/)
-+ [ ] [F. Face Recognition Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/F8/)
-+ [ ] [G. Petr’s Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/G8/)
-+ [ ] [H. Greedy Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/H8/)
-+ [ ] [I. Euclid’s Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/I8/)
-+ [x] [J. Closest Pair Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/J8/)
-+ [ ] [K. Interactive Algorithm](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/K8/)
-+ [ ] [L. Not Our Problem](https://official.contest.yandex.com/ptz-winter-2020/contest/17020/problems/L8/)
++ [ ] [F. Face Recognition Algorithm](https://www.acmicpc.net/problem/18493)
++ [ ] [G. Petr’s Algorithm](https://www.acmicpc.net/problem/18494)
++ [ ] [H. Greedy Algorithm](https://www.acmicpc.net/problem/18495)
++ [ ] [I. Euclid’s Algorithm](https://www.acmicpc.net/problem/18496)
++ [x] [J. Closest Pair Algorithm](https://www.acmicpc.net/problem/18497)
++ [ ] [K. Interactive Algorithm](https://www.acmicpc.net/problem/18498)
++ [ ] [L. Not Our Problem](https://www.acmicpc.net/problem/18499)
 
-## A. Um nik’s Algorithm
+## A. Um_nik’s Algorithm
 
 题意：给出左侧$n_1$个点，右侧$n_2$个点，总共$m$条边的二分图。令最大匹配大小为$K$，你需要找出一个匹配大小至少为$0.95K$。
 

@@ -1,4 +1,4 @@
-# XVI Open Cup. Grand Prix of Moscow
+# XVI Open Cup. Stage 15. Grand Prix of Moscow
 
 + [ ] [A. Guess A Number](https://official.contest.yandex.ru/opencupXVI/contest/2366/problems/A)
 - [ ] [B. Path Choosing](https://official.contest.yandex.ru/opencupXVI/contest/2366/problems/B)
