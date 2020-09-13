@@ -120,8 +120,8 @@
 + [XX Open Cup. Stage 8. Grand Prix of Poland / AMPPZ 2019](/opencup/2019-2020/grand-prix-of-poland.md) [2/12]
 + [XX Open Cup. Stage 9. Grand Prix of Beijing / CCPC Final 2019](/opencup/2019-2020/grand-prix-of-beijing.md)
 + [XX Open Cup. Stage 10. Grand Prix of Xian / 2019 ICPC Asia-East Continent Final](/opencup/2019-2020/grand-prix-of-xian.md) [1/13]
-+ [XX Open Cup. Stage 11. Grand Prix of Gomel / Petrozavodsk Winter 2020. Gennady Korotkevich Contest 5](/opencup/2019-2020/grand-prix-of-gomel.md) [2/11]
-+ [XX Open Cup. Stage 12. Grand Prix of Zhejiang / Petrozavodsk Winter 2020. Yuhao Du Contest 7](/opencup/2019-2020/grand-prix-of-zhejiang.md) [5/12]
++ [XX Open Cup. Stage 11. Grand Prix of Gomel / Petrozavodsk Winter 2020. Day 7. Gennady Korotkevich Contest 5](/opencup/2019-2020/grand-prix-of-gomel.md) [2/11]
++ [XX Open Cup. Stage 12. Grand Prix of Zhejiang / Petrozavodsk Winter 2020. Day 9. Yuhao Du Contest 7](/opencup/2019-2020/grand-prix-of-zhejiang.md) [5/12]
 + [XX Open Cup. Stage 13. Grand Prix of America / 2020 ICPC North America Championship](/opencup/2019-2020/grand-prix-of-america.md)
 + [XX Open Cup. Stage 14. Grand Prix of Wroclaw](/opencup/2019-2020/grand-prix-of-wroclaw.md) [3/12]
 + [XX Open Cup. Stage 15. Grand Prix of Tokyo](/opencup/2019-2020/grand-prix-of-tokyo.md) [10/12]
@@ -222,7 +222,7 @@
 + [XV Open Cup. Stage 3. Grand Prix of Central Europe / AMPPZ 2014]
 + [XV Open Cup. Stage 4. Grand Prix of Europe / CERC 2014]
 + [XV Open Cup. Stage 5. Grand Prix of Peterhof]
-+ [XV Open Cup. Stage 6. Grand Prix of Japan / Petrozavodsk Winter 2015. Day 2. Makoto Soejima Contest 1]
++ [XV Open Cup. Stage 6. Grand Prix of Japan / Petrozavodsk Winter 2015. Day 2. Makoto Soejima Contest 1 / Japan Alumni Group Summer Camp 2014. Day 2]
 + [XV Open Cup. Stage 7. Northern Grand Prix / Petrozavodsk Winter 2015. Day 8. Andrew Stankevich Contest 47]
 + [XV Open Cup. Stage 8. Grand Prix of Karelia / Petrozavodsk Winter 2015. Day 7. Petrozavodsk SU Contest](/opencup/2014-2015/grand-prix-of-karelia.md) [1/8]
 + [XV Open Cup. Stage 9. Grand Prix of Udmurtia]
@@ -234,7 +234,7 @@
 
 ---
 
-+ [XIV Open Cup. Stage 1. Grand Prix of SPb]
++ [XIV Open Cup. Stage 1. Grand Prix of SPb](/opencup/2013-2014/grand-prix-of-spb.md)
 + [XIV Open Cup. Stage 2. Grand Prix of Southern Europe]
 + [XIV Open Cup. Stage 3. Grand Prix of Siberia]
 + [XIV Open Cup. Stage 4. Grand Prix of Europe]
@@ -251,7 +251,7 @@
 
 ---
 
-+ [XIII Open Cup. State 1. Grand Prix of Saratov / Petrozavodsk Winter 2013. Day 4. Saratov SU Contest]
++ [XIII Open Cup. State 1. Grand Prix of Saratov / Petrozavodsk Winter 2013. Day 4. Saratov SU Contest](/opencup/2013-spring/grand-prix-of-saratov.md)
 + [XIII Open Cup. State 1. Division 2. Grand Prix of Europe]
 + [XIII Open Cup. State 2. Grand Prix of Ukraine]
 + [XIII Open Cup. State 3. Grand Prix of Kharkiv]
@@ -263,12 +263,12 @@
 
 ---
 
-+ [XII Open Cup. State 1. Grand Prix of Udmurtia]
++ [XII Open Cup. State 1. Grand Prix of Udmurtia](/opencup/2012-autumn/grand-prix-of-udmurtia.md)
 + [XII Open Cup. State 2. Grand Prix of Belarus]
 + [XII Open Cup. State 3. Grand Prix of SPb]
-+ [XII Open Cup. State 4. Grand Prix of Eastern Europe]
++ [XII Open Cup. State 4. Grand Prix of Eastern Europe / AMPPZ 2012]
 + [XII Open Cup. State 5. Grand Prix of Siberia]
-+ [XII Open Cup. State 6. Grand Prix of Central Europe]
++ [XII Open Cup. State 6. Grand Prix of Central Europe / CERC 2012]
 + [XII Open Cup. State 7. Grand Prix of Peterhof]
 
 ---
@@ -277,13 +277,28 @@
 
 ## Petrozavodsk Winter/Summer Training Camp
 
-+ [Petrozavodsk Winter 2020. Day 1. SPb SU Contest](/petrozavodsk/2020-winter/spb-su-contest.md) [9/12]
-+ [Petrozavodsk Winter 2020. Day 2. Greetings from Japan / 2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/2020-winter/greetings-from-japan.md) [11/11]
-+ [Petrozavodsk Wintwe 2020. Day 3. 300iq Contest 3](/petrozavodsk/2020-winter/300iq-contest-3.md) [10/10]
-+ [Petrozavodsk Winter 2020. Day 4. Yandex Cup 2020](/petrozavodsk/2020-winter/yandex-cup-2020.md) [9/10]
-+ [Petrozavodsk Winter 2020. Day 5. Jagiellonian U Contest](/petrozavodsk/2020-winter/jagiellonian-u-contest.md) [12/12]
-+ [Petrozavodsk Winter 2020. Day 6. Lviv NU Contest](/petrozavodsk/2020-winter/lviv-nu-contest.md) [3/12]
-+ [Petrozavodsk Winter 2020. Day 8. Almost Algorithmic Contest](/petrozavodsk/2020-winter/almost-algoritmic-contest.md) [1/12]
+### Petrozavodsk Summer 2020
+
+| # | Contest | Upsolving | Progress |
+|:--:|:--|:--:|:--:|
+| Day 1 | [Warsaw U Contest](/petrozavodsk/2020-summer/warsaw-u-contest.md) | | 12/12 |
+| Day 2 | [SPb SU LOUD ENOUGH Contest](/petrozavodsk/2020-summer/spb-su-loud-enough-contest.md)| | |
+| Day 3 | Songyang Chen Contest 3 | | |
+| Day 4 | Xi Lin Contest 6 | | 13/13 |
+| Day 5 | JAG Summer+ Opening Contest | | |
+| Day 5 | Korean Contest | | |
+
+### Petrozavodsk Winter 2020
+
+| # | Contest | Upsolving | Progress |
+|:--:|:--|:--:|:--:|
+| Day 1 | [SPb SU Contest](/petrozavodsk/2020-winter/spb-su-contest.md) | | 9/12 |
+| Day 2 | [Greetings from Japan / 2019-2020 ICPC, Asia, Yokohama Regional Contest](/petrozavodsk/2020-winter/greetings-from-japan.md) | | 11/11 |
+| Day 3 | [300iq Contest 3](/petrozavodsk/2020-winter/300iq-contest-3.md) | | 10/10 |
+| Day 4 | [Yandex Cup 2020](/petrozavodsk/2020-winter/yandex-cup-2020.md) | | 9/10 |
+| Day 5 | [Jagiellonian U Contest](/petrozavodsk/2020-winter/jagiellonian-u-contest.md) | | 12/12 |
+| Day 6 | [Lviv NU Contest](/petrozavodsk/2020-winter/lviv-nu-contest.md) | | 3/12 |
+| Day 8 | [Almost Algorithmic Contest](/petrozavodsk/2020-winter/almost-algoritmic-contest.md) | | 1/12 |
 
 ---
 
@@ -381,7 +396,7 @@
 + [Petrozavodsk Winter 2015. Day 4. Moscow SU Tapirs Contest]
 + [Petrozavodsk Winter 2015. Day 5. U of Wroclaw Contest]
 + [Petrozavodsk Winter 2015. Day 6. Jagiellonian U Contest](/petrozavodsk/2015-winter/jagiellonian-u-contest.md) [11/11]
-+ [Petrozavodsk Winter 2015. Day 9. Mikhail Tikhomirov Contest 1]
++ [Petrozavodsk Winter 2015. Day 9. Mikhail Tikhomirov Contest 1](/petrozavodsk/2015-winter/michael-tikhomirov-contest-1.md) [10/10]
 
 ---
 
@@ -407,15 +422,19 @@
 
 ---
 
-+ [Petrozavodsk Summer 2013. Day 1. Gennady Korotkevich Contest 1]
-+ [Petrozavodsk Summer 2013. Day 2. Moscow SU ST + NNSU Contest]
-+ [Petrozavodsk Summer 2013. Day 3. Moscow IPT Contest]
-+ [Petrozavodsk Summer 2013. Day 4. Comenius U Selection by Michal Forisek]
-+ [Petrozavodsk Summer 2013. Day 5. Japanese Contest]
-+ [Petrozavodsk Summer 2013. Day 6. Warsaw U Contest]
-+ [Petrozavodsk Summer 2013. Day 7. (ETH Zurich.md)+ Contest]
-+ [Petrozavodsk Summer 2013. Day 8. Andrew Stankevich Contest 44]
-+ [Petrozavodsk Summer 2013. Day 9. Petr Mitrtchev Contest 11]
+### Petrozavodsk Summer 2013
+
+| # | Contest | Upsolving | Progress |
+|:--:|:--|:--:|:--:|
+| Day 1 | Gennady Korotkevich Contest 1 | [e-olymp](https://vjudge.net/contest/394498.md) |  |
+| Day 2 | [MSU ST + NNSU Contest](/petrozavodsk/2013-summer/moscow-su-st+nnsu-contest.md) | [e-olymp](https://vjudge.net/contest/394499.md) | 8/10 |
+| Day 3 | Moscow IPT Contest | 
+| Day 4 | Comenius U Problems Selection by Michal Forisek | 
+| Day 5 | Japanese Contest | 
+| Day 6 | Warsaw U Contest | 
+| Day 7 | (ETH Zurich.md)+ Contest | 
+| Day 8 | Andrew Stankevich Contest 44 | 
+| Day 9 | Petr Mitrtchev Contest 11 |
 
 ---
 
@@ -441,7 +460,6 @@
 + [Japan Alumni Group Summer Camp 2015. Day2]
 + [Japan Alumni Group Spring Contest 2015]
 + [JAG Practice Contest for ACM-ICPC Asia Regional 2014]
-+ [Japan Alumni Group Summer Camp 2014. Day2]
 + [Japan Alumni Group Summer Camp 2014. Day4]
 + [Japan Alumni Group Spring Contest 2014]
 + [JAG Practice Contest for ACM-ICPC Asia Regional 2013]

@@ -1,0 +1,1 @@
+# Petrozavodsk Summer 2014. Day 4. Moscow SU SG Contest
